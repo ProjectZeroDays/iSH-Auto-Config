@@ -11,7 +11,9 @@ apk add xterm && \
 # Starts Background Daemon
 # Allows Persistent Connections, 
 # Even When iSH.app is Not Open  
-cat /dev/location >/dev/null &
+ln -s /dev $(dirname $0)/dev
+printf "Select 'Always allow'."
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
 
 # Select "While Using App"
 # Select "Always"  
