@@ -7,7 +7,9 @@ This is an automated configuration script that I created to (re)establish a full
 It is important to acknowledge that we (participants of this team) nor “I”, (it’s creator) support, approve, condone, or participate in unauthorized exploitation of any property without proper authority to do so. These tools are designed for network security professionals to be used in accordance to the law and are not responsible for any  unlawful actions or unintended use that is beyond the intended use of the software or prohibited within the legal boundaries of the licensing agreement.
 
 ### iOS Shortcut Users:
-##### I am still working on this and the settings, the shortcut will be available soon guys!
+##### I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
+
+https://www.icloud.com/shortcuts/cdde893504c1495ba9b3ebcbccc485d6
 
 For those of you using the iOS Shortcut I built, the iSH.wiki will be cloned into your root folder. A menu will ask which settings you want and it will create a snapshot of the original config files and then again after you have finished setting up iSH and have returned to iSH-Auto-Config.sh located in your root folder. All files will have been automatically downloaded into iCloud at /iCloud/Shortcuts/ish/iSH-Auto-Config/ and would have been copied to your root folder under iSH-Auto-Config. Settings for this app include full or partial installation, snapshots of before and after, and restoration of original config files is need be.  
 
