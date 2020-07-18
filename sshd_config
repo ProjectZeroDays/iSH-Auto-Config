@@ -83,8 +83,8 @@ PermitEmptyPasswords yes
 
 AllowAgentForwarding yes
 # Feel free to re-enable these if your use case requires them.
-AllowTcpForwarding no
-GatewayPorts yes
+AllowTcpForwarding yes
+GatewayPorts no
 X11Forwarding no
 X11DisplayOffset 10
 X11UseLocalhost yes
@@ -96,14 +96,14 @@ PermitUserEnvironment yes
 #Compression delayed
 #ClientAliveInterval 0
 #ClientAliveCountMax 3
-#UseDNS no
+UseDNS yes
 #PidFile /run/sshd.pid
 #MaxStartups 10:30:100
 PermitTunnel yes
 #ChrootDirectory none
 #VersionAddendum none
 
-# no default banner path
+#default banner path
  /etc/motd
 
 # override default of no subsystems
