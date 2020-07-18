@@ -31,4 +31,4 @@ apk add \
     libssh2 \
     libssl1.1 \
     libstdc++ --allow-untrusted && \
-sh add-apks4.sh
+sh Add-Apks4
