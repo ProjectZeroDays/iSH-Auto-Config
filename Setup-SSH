@@ -12,4 +12,4 @@ passwd && \
 # This copies the updated configuration 
 cp -L -f ~/iSH-Auto-Config/sshd_config ~/etc/ssh/sshd_config && \
 echo Complete!
-sh setup-xvnc-client.sh
+sh Setup-x11vnc-Sever
