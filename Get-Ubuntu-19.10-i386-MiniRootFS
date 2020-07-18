@@ -7,7 +7,7 @@
 # Twitter: https://twitter.com/Projectzerodays
 # Credit: https://github.com/MFDGaming
 #
-#Update & Install Bash
+# Update & Install Bash
 #
 apk update
 apk add bash
@@ -65,6 +65,7 @@ mkdir -p ubuntu-binds
 bin=startubuntu.sh
 printf "bout to spin this shit up and get some shit movin...\n"
 cat > $bin <<- EOM
+
 #!/bin/bash
 cd \$(dirname \$0)
 rm -rf ubuntu-fs/sys
@@ -96,10 +97,11 @@ if [ "$CMDI" = "y" ];then
 INSTP1
 elif [ "CMDI" = "Y" ];then 
 INSTP1 
+printf "Whole up son, slow down you did some shit wrong.\n" 
+fi
+
 else 
 printf "Whole up son, slow down you did some shit wrong.\n" 
 exit 
 fi 
 else 
-printf "Whole up son, slow down you did some shit wrong.\n" 
-fi
