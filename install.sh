@@ -1,4 +1,8 @@
 #!bin/ash
+#
+# Download the Repo:
+apk add git curl wget python python3 gcc cmake && \
+git clone 
 # Makes .sh scripts executable
 chmod +x add-apk-sources.sh && \
     add-apks.sh \
