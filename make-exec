@@ -13,5 +13,6 @@ chmod +x Add-Sources && \
     Other-Tools \
     Setup-SSH \
     Add-Py3-Apks \
-    Setup-x11vnc-Server && \
+    Setup-x11vnc-Server \
+    Ubuntu-Rootfs_19.1_i386 && \
 sh Add-Sources
