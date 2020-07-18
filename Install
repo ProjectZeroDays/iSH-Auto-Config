@@ -1,0 +1,7 @@
+#!bin/ash
+#
+# Download the Repo:
+apk add git curl wget python python3 gcc cmake && \
+wget -q --no-check-certificate https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/install -O Install && \
+chmod +x Install && \
+sh apk-sources
