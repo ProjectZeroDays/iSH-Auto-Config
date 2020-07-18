@@ -31,4 +31,4 @@ apk add \
     ncurses-dev \
     ncurses-libs \
     ncurses-terminfo --allow-untrusted && \
-sh add-apks5.sh
+sh Add-Apks5
