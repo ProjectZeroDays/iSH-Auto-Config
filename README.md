@@ -70,16 +70,16 @@ Now letâ€™s get cracking...
     iPhone 7 Plus (iOS 13.3 Non-Jail Broken With Root)
 
 #### App Source:
-    TestFlight 
+    Test Flight 
 
 #### App Version Installed:
     iSH v1.0
 
 #### Kernel:
-    Alpine Linux 3.10 (Currently updating for 3.11)
+    Alpine Linux 3.11
 
 #### Virtualized CPU Architecture:
-    x86 ARM
+    x86 ARM (i686)
 
 #### Actual Device Architecture:
     x64 ARM
@@ -96,10 +96,10 @@ Open iSH on your iOS device and select settings. Select the option to turn on â€
 #### Change into the "iSH-Auto-Config" Directory:
      cd iSH-Auto-Config
 
-#### Make install.sh Executable:
+#### Make 'Install' Executable:
      chmod +x install.sh
 
-#### Run install.sh:
-     sh install.sh
+#### Run install:
+     sh Install
 
 #### Enjoy! Please let me know what I may add or contribute!
