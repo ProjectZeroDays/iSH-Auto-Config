@@ -33,4 +33,4 @@ apk add \
     libcap \
     libcrypto1.1 \
     libcurl --allow-untrusted && \
-sh add-apks3.sh
+sh Add-Apks3
