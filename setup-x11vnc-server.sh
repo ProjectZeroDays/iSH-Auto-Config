@@ -6,7 +6,11 @@ apk add x11vnc xvfb xterm && \
 # Starts Background Daemon
 # Allows Persistent Connections, 
 # Even When iSH.app is Not Open  
-cat /dev/location >/dev/null &
+# cat /dev/location >/dev/null & (changed by %R) 
+# "This change is just in case the setup is being done in a chroot so iSH can find /dev/location, but being inside chroot is not necessary."
+ln -s /dev $(dirname $0)/dev
+printf "Select 'Always allow'."
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
 
 # Select "While Using App"
 # Select "Always"  
