@@ -1,7 +1,17 @@
 #!/bin/bash
-#Credit goes to: https://github.com/MFDGaming
-#Reqrite by: https://github.com/ProjectZeroDays
-
+# BashEnv is set here to setup Ubuntu Mini RootFS on iSH i686
+#
+# Rewrite: https://github.com/ProjectZeroDays
+# Email:   info@wearetheminc.com
+# Web:     ProjectZeroDays.com
+# Twitter: https://twitter.com/Projectzerodays
+# Credit: https://github.com/MFDGaming
+#
+#Update & Install Bash
+#
+apk update
+apk add bash
+#
 UBUNTU_VERSION=19.10
 DIR=ubuntu-fs
 ARCHITECTURE=i386
