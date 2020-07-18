@@ -8,4 +8,4 @@ Python3 -m pip install commix && \
 Python3 -m pip install ethtools && \
 python3 -m pip install numpy && \
 python3 -m pip install --upgrade pip && \ 
-sh pentesting-tools.sh
+sh Add-Pentesting-Tools
