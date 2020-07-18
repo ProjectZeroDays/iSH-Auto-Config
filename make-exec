@@ -1,0 +1,17 @@
+#!bin/ash
+# Make scripts executable
+chmod +x Add-Sources && \
+    Add-Apks \
+    Add-Apks2 \
+    Add-Apks3 \
+    Add-Apks4 \
+    Add-Apks5 \
+    Add-Apks6 \
+    Pip-Pipx-Pipenv-Config \
+    Add-Pips \
+    Add-Pentesting-Tools \
+    Other-Tools \
+    Setup-SSH \
+    Add-Py3-Apks \
+    Setup-x11vnc-Server && \
+sh Add-Sources
