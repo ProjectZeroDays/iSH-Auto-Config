@@ -39,4 +39,4 @@ apk add \
     yersinia \
     zlib \
     zlib-dev --allow-untrusted && \
-sh pip-pipx-pipenv-config.sh
+sh pip-pipx-pipenv-config
