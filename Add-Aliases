@@ -1,0 +1,22 @@
+#!/bin/ash
+start 
+kali
+printf "This script adds aliases to Alpine/Ubuntu.\n"
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
+alias kali="(PS1="root@kali:~# ")"
+alias cheat="sh /usr/local/bin/cht"
+alias apt="apk"
+alias apt-get="apk"
+alias install="add"
+alias autoremove="cache"
+alias start="neofetch --ascii_distro kali"
+#
+clear
+sh Add-Sources
