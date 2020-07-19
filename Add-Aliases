@@ -17,6 +17,7 @@ alias apt-get="apk"
 alias install="add"
 alias autoremove="cache"
 alias start="neofetch --ascii_distro kali"
+alias msf="/usr/local/bin/msf"
 #
 clear
 sh Add-Sources
