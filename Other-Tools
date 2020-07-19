@@ -19,7 +19,7 @@ cht.sh --mode auto
 mv /usr/local/bin/cht.sh /usr/local/bin/cht 
 #
 cd  
-apk add && \
+apk add \
     apk-autoupdate \
     apk-autoupdate-doc \
     automake \
