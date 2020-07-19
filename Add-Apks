@@ -1,8 +1,20 @@
 #!/bin/ash
+
+printf "Downloading and Installing Apks...\n"
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
+start kali
+clear
+sh Add-Sources
 # Adds More APKs
-apk upgrade && \
+apk upgrade && 
     apk add \
-    aircrack-ng \
     alpine-baselayout \
     alpine-keys \
     apk-tools \
@@ -24,5 +36,7 @@ apk upgrade && \
     curl \
     cython \
     daq-sfbpf \
-    db --allow-untrusted && \
+    db --allow-untrusted && 
+clear
 sh Add-Apks2
+
