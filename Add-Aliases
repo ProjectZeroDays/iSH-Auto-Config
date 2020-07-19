@@ -1,6 +1,5 @@
 #!/bin/ash
-start 
-kali
+
 printf "This script adds aliases to Alpine/Ubuntu.\n"
 #
 # Creator: Project Zero Days
@@ -19,5 +18,6 @@ alias autoremove="cache"
 alias start="neofetch --ascii_distro kali"
 alias msf="/usr/local/bin/msf"
 #
+start kali
 clear
 sh Add-Sources
