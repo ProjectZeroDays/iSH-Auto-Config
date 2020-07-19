@@ -1,6 +1,6 @@
 #!/bin/ash
 # Adds More APKs
-apk add \
+apk add && \
     easy_install \
     emacs \
     emacs-nox \
