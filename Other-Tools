@@ -1,28 +1,25 @@
-#!bin/ash
+#!bin/bash
 # Creator: Project Zero Days
 # Github:  Github.com/ProjectZeroDays
 # Twitter: Twitter.com/ProjectZeroDays
 # Web:     https://ProjectZeroDays.com
 # Email:   info@ProjectZeroDays.com, 
 # Secure:  ProjectZeroDays@pm.me
-alias kali="(PS1="root@kali:~# ")"
+alias kali="PS1="root@kali:~# "
 alias cheat="sh /usr/local/bin/cht"
-alias apt="apk"
-alias apt-get="apk"
-alias install="add"
 alias autoremove="cache"
-# Installs "Other Tools" which include an auto-updates,
-# a desktop enviornment and Periphials (experimental 
-# use only - not fully working).
+printf="Installs "Other Tools" which include an auto-updates, 
+a desktop enviornment and Periphials 
+(experimental use only - not fully working)."
 #
 # Installs Cheat Cheat (cht.sh) 
-curl https://cht.sh/:cht.sh | tee /usr/local/bin/cht.sh && \
-chmod +x /usr/local/bin/cht.sh && \
-cht.sh --mode auto && \ 
-mv /usr/local/bin/cht.sh /usr/local/bin/cht && \
+curl https://cht.sh/:cht.sh | tee /usr/local/bin/cht.sh && 
+chmod +x /usr/local/bin/cht.sh && 
+cht.sh --mode auto && 
+mv /usr/local/bin/cht.sh /usr/local/bin/cht && 
 #
-cd && \
-apk add && \
+cd && 
+apk add && 
     apk-autoupdate \
     apk-autoupdate-doc \
     automake \
@@ -43,9 +40,11 @@ apk add && \
     xf86-input-mouse \
     xf86-input-mouse-dev \
     zfs-auto-snapshot \
-    zfs-auto-snapshot-doc && \
-bash && \
-cd ~/ && \
-kali && \
-clear 
+    zfs-auto-snapshot-doc \
+bash 
+cd ~/ 
+clear
+start 
+kali  
+ 
 
