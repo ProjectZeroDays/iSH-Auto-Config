@@ -1,6 +1,6 @@
 #!/bin/ash
 # Adds More APKs
-apk add \
+apk add && \
     ncurses-terminfo-base \
     net-tools\
     nettle \
@@ -65,4 +65,4 @@ apk add \
     proftpd \
     py-pip \
     python2 --allow-untrusted && \
-sh add-apks6
+sh Add-Apks6
