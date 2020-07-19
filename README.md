@@ -2,7 +2,10 @@
 
 # iSH Auto Configuration For iOS
 
-This is an automated configuration script that I created to (re)establish a fully updated, upgraded, and pre-configured penn-testing and development environment. 
+This is an automated configuration script that I created to (re)establish a fully updated, upgraded, and pre-configured pentesting and development environment in iSH when things go wrong and your files disappear or you happen to break something internally beyond repair. I got a little tired of continually setting everything back up again. 
+
+### *NOTE* 
+you can now backup your file system using the settings menu as descibed in the wiki: 
 
 It is important to acknowledge that we (participants of this team) nor “I”, (it’s creator) support, approve, condone, or participate in unauthorized exploitation of any property without proper authority to do so. These tools are designed for network security professionals to be used in accordance to the law and are not responsible for any  unlawful actions or unintended use that is beyond the intended use of the software or prohibited within the legal boundaries of the licensing agreement.
 
@@ -25,10 +28,10 @@ Now let’s get cracking...
     https://ish.app
 
 #### iSH Github:
-    https://github.com/tbodt/ish
+    https://github.com/ish-app/ish
 
 #### iSH Wiki:
-    https://github.com/tbodt/ish.wiki.git
+    https://github.com/ish-app/ish/wiki
 
 #### iSH Twitter:
     https://twitter.com/iSH_app
@@ -43,7 +46,7 @@ Now let’s get cracking...
     https://patreon.com/tbodt
 
 #### iSH Bug Reports & Feedback:
-    https://github.com/tbodt/ish/issues
+    https://github.com/ish-app/ish/issues
 
 #### Genre:
     Terminal Emulator 
