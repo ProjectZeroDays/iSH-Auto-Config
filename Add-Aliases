@@ -1,5 +1,5 @@
-#!/bin/ash
-
+#!/bin/bash
+apk add bash 
 printf "This script adds aliases to Alpine/Ubuntu.\n"
 #
 # Creator: Project Zero Days
@@ -9,15 +9,12 @@ printf "This script adds aliases to Alpine/Ubuntu.\n"
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 #
-alias kali="(PS1="root@kali:~# ")"
+alias kali=PS1="root@kali:# "
 alias cheat="sh /usr/local/bin/cht"
-alias apt="apk"
-alias apt-get="apk"
-alias install="add"
-alias autoremove="cache"
-alias start="neofetch --ascii_distro kali"
-alias msf="/usr/local/bin/msf"
+alias startkali="neofetch --ascii_distro kali"
+alias startubuntu="neofetch --ascii_distro ubuntu"
+alias msfconsole="/usr/local/bin/msf"
 #
-start kali
 clear
+startkali
 sh Add-Sources
