@@ -1,6 +1,6 @@
 #!/bin/bash
 apk add bash 
-printf "This script adds aliases to Alpine/Ubuntu.\n"
+printf "Adding aliases to Alpine, if you are already running Ubuntu in iSH, use the other script instead of this one.\n"
 #
 # Creator: Project Zero Days
 # Email:   info@ProjectZeroDays.com
