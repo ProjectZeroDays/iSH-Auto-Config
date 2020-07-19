@@ -1,5 +1,15 @@
 #!/bin/ash
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
 # Adds More APKs
+#
+
+#
 apk add && \
     easy_install \
     emacs \
