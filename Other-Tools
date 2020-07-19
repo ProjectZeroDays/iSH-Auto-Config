@@ -13,9 +13,9 @@ a desktop enviornment and Periphials
 (experimental use only - not fully working)."
 #
 # Installs Cheat Cheat (cht.sh) 
-curl https://cht.sh/:cht.sh | tee /usr/local/bin/cht.sh && 
-chmod +x /usr/local/bin/cht.sh && 
-cht.sh --mode auto && 
+curl https://cht.sh/:cht.sh | tee /usr/local/bin/cht.sh
+chmod +x /usr/local/bin/cht.sh 
+cht.sh --mode auto 
 mv /usr/local/bin/cht.sh /usr/local/bin/cht 
 #
 cd  
