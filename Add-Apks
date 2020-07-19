@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 #
 # Creator: Project Zero Days
 # Email:   info@ProjectZeroDays.com
@@ -10,6 +10,8 @@
 printf "Downloading and Installing Apks...\n"
 #
 start kali
+PS1="root@kali:~# "
+#
 clear
 sh Add-Sources
 # Adds More APKs
