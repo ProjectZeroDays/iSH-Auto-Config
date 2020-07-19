@@ -5,7 +5,7 @@
 # Web:     https://ProjectZeroDays.com
 # Email:   info@ProjectZeroDays.com, 
 # Secure:  ProjectZeroDays@pm.me
-alias kali="PS1="root@kali:~# "
+alias kali="PS1="root@kali:# "
 alias cheat="sh /usr/local/bin/cht"
 alias autoremove="cache"
 printf="Installs "Other Tools" which include an auto-updates, 
@@ -16,10 +16,10 @@ a desktop enviornment and Periphials
 curl https://cht.sh/:cht.sh | tee /usr/local/bin/cht.sh && 
 chmod +x /usr/local/bin/cht.sh && 
 cht.sh --mode auto && 
-mv /usr/local/bin/cht.sh /usr/local/bin/cht && 
+mv /usr/local/bin/cht.sh /usr/local/bin/cht 
 #
-cd && 
-apk add && 
+cd  
+apk add && \
     apk-autoupdate \
     apk-autoupdate-doc \
     automake \
