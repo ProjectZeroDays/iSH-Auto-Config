@@ -1,4 +1,6 @@
-List of Py3 Apks in Database 
+#List of Py3 Apks in Database 
+
+#This is a list of all that is available through #the apk package manager.
 
 py3-qt5-5.13.1-r1
 py3-bottle-request-0.2.0-r2
