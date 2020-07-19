@@ -42,7 +42,7 @@ apk add && \
     zfs-auto-snapshot \
     zfs-auto-snapshot-doc \
 bash 
-cd ~/ 
+cd ~
 clear
 start 
 kali  
