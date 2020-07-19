@@ -1,6 +1,6 @@
 #!/bin/ash
 # Adds More APKs
-    apk upgrade && \
+apk upgrade && \
     apk add \
     aircrack-ng \
     alpine-baselayout \
@@ -25,4 +25,4 @@
     cython \
     daq-sfbpf \
     db --allow-untrusted && \
-sh add-apks2.sh
+sh Add-Apks2
