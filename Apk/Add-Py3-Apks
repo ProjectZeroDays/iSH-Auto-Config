@@ -1,9 +1,19 @@
+#!/bin/bash 
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
+printf "Adding Py3 Apks... \n" && \
+#
 apk add && \
     py3-allfiles \
     py3-ansi2html \
     py3-ansicolor \
     py3-ansicolors \
-    py3-apache-libcloud \
     py3-apipkg \
     py3-apparmor \
     py3-appdirs \
@@ -28,7 +38,6 @@ apk add && \
     py3-cli_helpers \
     py3-click-plugins \
     py3-clikit \
-    py3-cloudpickle \
     py3-colorlog \
     py3-configshell \
     py3-cookies \
@@ -45,13 +54,6 @@ apk add && \
     py3-daemonize \
     py3-dbus \
     py3-defcon \
-    py3-django \
-    py3-django-appconf \
-    py3-django-cors-headers \
-    py3-django-js-asset \
-    py3-django-rest-framework \
-    py3-django-rest-swagger \
-    py3-django-suit \
     py3-dnslib \
     py3-dnspython \
     py3-docutils \
@@ -67,8 +69,6 @@ apk add && \
     py3-funcy \
     py3-furl \
     py3-future \
-    py3-geoip \
-    py3-geoip2 \
     py3-gevent \
     py3-gevent-websocket \
     py3-gitdb2 \
@@ -91,8 +91,6 @@ apk add && \
     py3-impacket \
     py3-incoming \
     py3-inflection \
-    py3-ipaddr \
-    py3-ipaddress \
     py3-iso8601 \
     py3-jellyfish \
     py3-jwcrypto \
@@ -109,19 +107,9 @@ apk add && \
     py3-matplotlib \
     py3-mccabe \
     py3-mitmproxy \
-    py3-mongo \
     py3-more-itertools \
     py3-mutagen \
     py3-mysqlclient \
-    py3-natsort \
-    py3-ndg_httpsclient \
-    py3-netaddr \
-    py3-netifaces \
-    py3-netmiko \
-    py3-nmap \
-    py3-numpy \
-    py3-numpy-dev \
-    py3-numpy-doc \
     py3-oauthlib \
     py3-opencl \
     py3-opencolorio \
@@ -136,7 +124,6 @@ apk add && \
     py3-pathtools \
     py3-peewee \
     py3-phonenumbers \
-    py3-phpserialize \
     py3-pika \
     py3-pikepdf \
     py3-pkgconfig \
@@ -156,7 +143,6 @@ apk add && \
     py3-pysendfile \
     py3-pysimplesoap \
     py3-pysocks \
-    py3-pytest-localserver \
     py3-pytools \
     py3-pyutilib \
     py3-pyzfs \
@@ -192,15 +178,6 @@ apk add && \
     py3-sip-pyqt5 \
     py3-smbus \
     py3-soupsieve \
-    py3-sphinx \
-    py3-sphinx-autobuild \
-    py3-sphinxcontrib-httpdomain \
-    py3-sphinxcontrib-inheritance \
-    py3-sphinxcontrib-manpage \
-    py3-sphinxcontrib-phpdomain \
-    py3-sphinxcontrib-programoutput \
-    py3-sphinxcontrib-restbuilder \
-    py3-sphinxcontrib-websupport \
     py3-sqlalchemy \
     py3-sqlalchemy-migrate \
     py3-sqlalchemy-utils \
@@ -221,16 +198,7 @@ apk add && \
     py3-unpaddedbase64 \
     py3-update-checker \
     py3-uptime \
-    py3-urlgrabber \
-    py3-urlgrabber-doc \
-    py3-urllib3 \
-    py3-urlobject \
     py3-virtualenv \
-    py3-webassets \
-    py3-webencodings \
-    py3-websocket-client \
-    py3-websockets \
-    py3-wifi \
     py3-ws4py \
     py3-xxhash \
     py3-yaml \
