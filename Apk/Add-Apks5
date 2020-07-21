@@ -7,6 +7,7 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 #
+PS1="root@kali:# " && \
 # Adds More APKs
 apk update && \
 apk upgrade && \
