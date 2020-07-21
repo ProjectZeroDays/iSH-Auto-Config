@@ -7,13 +7,11 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 #
-printf "Downloading and Installing Apks...\n"
+PS1="root@kali:~# " && \
+printf "Downloading and Installing Apks... \n" && \
 #
-start kali
-PS1="root@kali:~# "
-#
-clear
-sh Add-Sources
+clear && \
+sh Add-Sources && \
 # Adds More APKs
 apk upgrade && 
     apk add \
@@ -39,6 +37,6 @@ apk upgrade &&
     cython \
     daq-sfbpf \
     db --allow-untrusted && 
-clear
+clear && \
 sh Add-Apks2
 
