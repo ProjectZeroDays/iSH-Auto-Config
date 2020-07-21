@@ -1,4 +1,4 @@
-#!bin/bash 
+#!/bin/bash 
 #
 # Creator: Project Zero Days
 # Email:   info@ProjectZeroDays.com
@@ -7,7 +7,8 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 #
-# Adds More APKs
+PS1="root@kali:# " && \
+# Adding More APKs
 apk add &&
     python3 \
     python3-dev \
