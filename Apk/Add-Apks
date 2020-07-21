@@ -11,10 +11,10 @@ PS1="root@kali:~# " && \
 printf "Downloading and Installing Apks... \n" && \
 #
 clear && \
-sh Add-Sources && \
-# Adds More APKs
-apk upgrade && 
-    apk add \
+# adds more apks
+apt update && \
+apk upgrade && \
+apk add &&
     alpine-baselayout \
     alpine-keys \
     apk-tools \
