@@ -1,6 +1,14 @@
-#!/bin/ash
+#!bin/bash 
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
 # Adds More APKs
-apk add && \
+apk add && 
     libtasn1 \
     libtls-standalone \
     libunistring \
@@ -30,5 +38,5 @@ apk add && \
     ncurses \
     ncurses-dev \
     ncurses-libs \
-    ncurses-terminfo --allow-untrusted && \
-sh Add-Apks5
+    ncurses-terminfo --allow-untrusted && 
+sh Apk/Add-Apks5
