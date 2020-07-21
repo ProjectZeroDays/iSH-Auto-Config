@@ -12,7 +12,7 @@ printf "Adding Necessary APKs & Configuring iSH \n" && \
 apk add git curl wget neofetch python python3 && \
 clear && \
 printf "Moving Docs & Py3. View using 'Docs' 'Py3' \n" && \
-printf "Docs DIR includes Documentation. \n"
+printf "Docs DIR includes Documentation. \n" && \
 printf ".Py3 DIR holds SRC files for Installed Py Programs \n" && \
 mv SYS/passwd SYS/sshd_config SYS/profile SYS/motd /etc && \
 mv Py3 .Py3 && \
