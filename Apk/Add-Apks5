@@ -8,6 +8,8 @@
 # Secure:  https://ProjectZeroDays@pm.me
 #
 # Adds More APKs
+apk update && \
+apk upgrade && \
 apk add && 
     ncurses-terminfo-base \
     net-tools\
@@ -73,4 +75,5 @@ apk add &&
     proftpd \
     py-pip \
     python2 --allow-untrusted && 
+clear && \
 sh Apk/Add-Apks6
