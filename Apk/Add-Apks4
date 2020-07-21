@@ -21,8 +21,7 @@ apk add &&
     linux-headers \
     llvm \
     lshw \
-    lua5.2-libs \
-    lua5.3-libs \
+    lua
     lz4-libs \
     m4 \
     macchanger \
