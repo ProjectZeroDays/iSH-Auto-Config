@@ -27,10 +27,6 @@ apk add &&
     libmagic \
     libmnl \
     libmount \
-    libnet \
-    libnetfilter_queue \
-    libnfnetlink \
-    libnl3 \
     libpcap \
     libpcap-dev \
     libpq \
@@ -41,5 +37,6 @@ apk add &&
     libsasl \
     libssh2 \
     libssl1.1 \
-    libstdc++ --allow-untrusted && \
+    libstdc++ --allow-untrusted && 
+clear && \
 sh Apk/Add-Apks4
