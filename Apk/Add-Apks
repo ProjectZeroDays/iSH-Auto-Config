@@ -10,7 +10,7 @@
 PS1="root@kali:~# " && \
 printf "Downloading and Installing Apks... \n" && \
 #
-# adds more apks
+# adding more apks
 apt update && \
 apk upgrade && \
 apk add &&
