@@ -1,6 +1,4 @@
 #!/bin/bash
-apk add bash 
-printf "Adding aliases to Alpine, if you are already running Ubuntu in iSH, use the other script instead of this one.\n"
 #
 # Creator: Project Zero Days
 # Email:   info@ProjectZeroDays.com
@@ -8,6 +6,9 @@ printf "Adding aliases to Alpine, if you are already running Ubuntu in iSH, use 
 # Twitter: Twitter.com/ProjectZeroDays
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
+#
+PS1="root@kali:# "
+printf "Adding new aliases, see Docs/Aliases.md for info. \n"
 #
 alias kali=PS1="root@kali:# "
 alias cheat="sh /usr/local/bin/cht"

@@ -1,15 +1,22 @@
-#!bin/bash
+#!/bin/bash
 #
-# This will install and configure SSH
-# Feel free to edit as you see fit
-# nano /etc/ssh/sshd_config
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
 #
-# Install openSSH
+PS1='root@kali:# ' && \
+printf "Configuring SSH for your system... \n" && \
+#
 apk add openssh openssh-client && \
 ssh-keygen -A && \
 passwd && \
+clear && \
 #
-# This copies the updated configuration 
-cp -L -f ~/iSH-Auto-Config/sshd_config ~/etc/ssh/sshd_config && \
-echo Complete!
-sh Setup-x11vnc-Sever
+printf "This copies the updated configuration \n" && \
+cp -L -f SYS/sshd_config /etc/ssh/sshd_config && \
+echo Complete! && \
+clear && \
+sh VNC/Setup-x11vnc-Sever

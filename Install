@@ -1,8 +1,23 @@
-#!bin/ash
+#!/bin/bash
 #
-# Download the Repo:
-apk add git curl wget python python3 gcc cmake && \
-wget -q --no-check-certificate https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/install -O Install && \
-chmod +x Install && \
-chmod +x make-exec && \
-sh make-exec
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+# 
+PS1='root@kali:# ' && \
+printf "Adding Necessary APKs & Configuring iSH \n" && \
+apk add git curl wget neofetch python python3 && \
+clear && \
+printf "Moving Docs & Py3. View using 'Docs' 'Py3' \n" && \
+printf "Docs DIR includes Documentation. \n"
+printf ".Py3 DIR holds SRC files for Installed Py Programs \n" && \
+mv SYS/passwd SYS/sshd_config SYS/profile SYS/motd /etc && \
+mv Py3 .Py3 && \
+mv .Py3 ../ && \
+mv Docs
+chmod +x /SYS/Make-Exec && \
+clear && \
+sh /SYS/Make-Exec

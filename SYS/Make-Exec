@@ -1,18 +1,30 @@
-#!bin/ash
-# Make scripts executable
+#!/bin/bash
+#
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
+PS1='root@kali:# ' && \
+printf "Making Config Scripts Executable \n" && \
+#
 chmod +x Add-Sources && \
-    Add-Apks \
-    Add-Apks2 \
-    Add-Apks3 \
-    Add-Apks4 \
-    Add-Apks5 \
-    Add-Apks6 \
-    Pip-Pipx-Pipenv-Config \
-    Add-Pips \
-    Add-Pentesting-Tools \
-    Other-Tools \
-    Setup-SSH \
-    Add-Py3-Apks \
-    Setup-x11vnc-Server \
-    Ubuntu-Rootfs_19.1_i386 && \
-sh Add-Sources
+    SYS/Add-Aliases \
+    Apk/Add-Apks \
+    Apk/Add-Apks2 \
+    Apk/Add-Apks3 \
+    Apk/Add-Apks4 \
+    Apk/Add-Apks5 \
+    Apk/Add-Apks6 \
+    Pip/Pip-Pipx-Pipenv-Config \
+    Pip/Add-Pips \
+    Tools/Add-Pentesting-Tools \
+    Tools/Other-Tools \
+    SYS/Setup-SSH \
+    Apk/Add-Py3-Apks \
+    VNC/Setup-x11vnc-Server \
+    Ubuntu/Ubuntu-Rootfs_19.1_i386 && \
+clear && \
+sh SYS/Add-Sources
