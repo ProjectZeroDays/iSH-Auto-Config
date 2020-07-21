@@ -7,6 +7,10 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 # 
+wget https://git.archlinux.org/pacman.git/snapshot/pacman-5.2.2.tar.gz && \
+tar -xf pacman-5.2.2.tar.gz
+cd pacman-5.2.2
+
 PS1='root@kali:# ' && \
 printf "Adding Necessary APKs & Configuring iSH \n" && \
 apk add git curl wget neofetch python python3 && \
