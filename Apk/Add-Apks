@@ -10,7 +10,6 @@
 PS1="root@kali:~# " && \
 printf "Downloading and Installing Apks... \n" && \
 #
-clear && \
 # adds more apks
 apt update && \
 apk upgrade && \
@@ -38,5 +37,5 @@ apk add &&
     daq-sfbpf \
     db --allow-untrusted && 
 clear && \
-sh Add-Apks2
+sh Apk/Add-Apks2
 
