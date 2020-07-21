@@ -1,6 +1,17 @@
-#!/bin/ash
+#!/bin/bash
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
+PS1="root@kali:~# " && \
 # Adds More APKs
-apk add && \
+apk update && \
+apk upgrade && \
+apk add && 
     libdnet \
     libedit \
     libffi \
@@ -31,4 +42,4 @@ apk add && \
     libssh2 \
     libssl1.1 \
     libstdc++ --allow-untrusted && \
-sh Add-Apks4
+sh Apk/Add-Apks4
