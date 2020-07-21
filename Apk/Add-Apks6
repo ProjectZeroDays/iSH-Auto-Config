@@ -1,11 +1,18 @@
-#!/bin/ash
+#!bin/bash 
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
 # Adds More APKs
-apk add \
+apk add &&
     python3 \
     python3-dev \
     readline \
     readline-dev \
-    recon-ng \
     rlwrap \
     ruby \
     ruby-bigdecimal \
@@ -16,7 +23,6 @@ apk add \
     ruby-libs \
     scanelf \
     serf \
-    snort \
     sqlite \
     sqlite-dev \
     sqlite-libs \
@@ -25,10 +31,8 @@ apk add \
     subversion \
     subversion-libs \
     tree \
-    tshark \
     tzdata \
     wget \
-    wireless-tools \
     wireshark-common \
     x11vnc \
     xterm \
@@ -38,5 +42,6 @@ apk add \
     yaml-dev \
     yersinia \
     zlib \
-    zlib-dev --allow-untrusted && \
-sh pip-pipx-pipenv-config
+    zlib-dev --allow-untrusted && 
+clear && \
+sh Pip/pip-pipx-pipenv-config
