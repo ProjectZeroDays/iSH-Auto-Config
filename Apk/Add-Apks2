@@ -21,7 +21,6 @@ apk add &&
     atools \
     archivemount \
     autoconf \
-    bash \
     binutils \
     bison \
     build-base \
