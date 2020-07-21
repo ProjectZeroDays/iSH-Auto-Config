@@ -1,4 +1,4 @@
-#!bin/ash
+#!bin/bash
 # Installs "Other Tools"
 #
 # Installs Cheat Cheat (cht.sh)
@@ -30,4 +30,4 @@ apk add && \
     zfs-auto-snapshot \
     zfs-auto-snapshot-doc && \
 clear && \
-fish
+bash
