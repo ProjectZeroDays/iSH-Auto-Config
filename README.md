@@ -8,7 +8,7 @@ This is an automated configuration script that I created to (re)establish a full
 
 https://github.com/ish-app/ish/wiki
 
-# To Clone this Wiki (Note: A Copy Is Already Included):
+### To Clone this Wiki (Note: A Copy Is Already Included):
     git clone https://github.com/ish-app/ish/wiki.git
 
 It is important to acknowledge that we (participants of this team) nor “I”, (it’s creator) support, approve, condone, or participate in unauthorized exploitation of any property without proper authority to do so. These tools are designed for network security professionals to be used in accordance to the law and are not responsible for any  unlawful actions or unintended use that is beyond the intended use of the software or prohibited within the legal boundaries of the licensing agreement.
