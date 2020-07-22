@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Creator: Project Zero Days
+# Creator: I  Project Zero Days
 # Email:   info@ProjectZeroDays.com
 # Github:  Github.com/ProjectZeroDays
 # Twitter: Twitter.com/ProjectZeroDays
@@ -10,12 +10,25 @@
 PS1="root@kali:# " && \
 printf "Adding new aliases, see Docs/Aliases.md for info. \n" && \
 #
-alias kali=PS1="root@kali:# " && \
-alias cheat="sh /usr/local/bin/cht" && \
-alias startkali="neofetch --ascii_distro kali" && \
-alias startubuntu="neofetch --ascii_distro ubuntu" && \
-alias msfconsole="/usr/local/bin/msf" && \
-alias author='git config --global user.email "projectzerodays@gmail.com" && git config --global user.name "projectzerodays"' && \
+alias Hostname='PS1=root@kali:# ' && \
+alias Cheat='sh /usr/local/bin/cht' && \
+alias Kali='neofetch --ascii_distro kali_small -L' && \
+alias Ubuntu="neofetch --ascii_distro ubuntu_small -L" && \
+alias msfconsole='/usr/local/bin/msf' && \
+alias Install='apk add'
+alias Fix='apk fix'
+alias Update='apk update'
+alias Upgrade='apk upgrade'
+alias Cache='apk cache'
+alias Push='git push'
+alias Fetch='fetch'
+alias Copy='copy'
+alias Add='add'
+alias Commit='git commit'
+alias Pull='git pull'
+alias rm='rm -r'
+alias Author='git config --global user.email "projectzerodays@gmail.com" && git config --global user.name "projectzerodays"' && \
+alias Update-Pip='
 #
 clear && \
 sh Add-Sources
