@@ -7,15 +7,15 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 #
-PS1="root@kali:# "
-printf "Adding new aliases, see Docs/Aliases.md for info. \n"
+PS1="root@kali:# " && \
+printf "Adding new aliases, see Docs/Aliases.md for info. \n" && \
 #
-alias kali=PS1="root@kali:# "
-alias cheat="sh /usr/local/bin/cht"
-alias startkali="neofetch --ascii_distro kali"
-alias startubuntu="neofetch --ascii_distro ubuntu"
-alias msfconsole="/usr/local/bin/msf"
+alias kali=PS1="root@kali:# " && \
+alias cheat="sh /usr/local/bin/cht" && \
+alias startkali="neofetch --ascii_distro kali" && \
+alias startubuntu="neofetch --ascii_distro ubuntu" && \
+alias msfconsole="/usr/local/bin/msf" && \
+alias author='git config --global user.email "projectzerodays@gmail.com" && git config --global user.name "projectzerodays"' && \
 #
-clear
-startkali
+clear && \
 sh Add-Sources
