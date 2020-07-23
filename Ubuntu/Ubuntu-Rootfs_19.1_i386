@@ -9,7 +9,7 @@
 #
 clear
 printf "This Project is distributed under the Lisence Project Zero Days\n"
-update
+apk update
 apk add wget
 apk add tar
 apk add bash
