@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 # BashEnv is set here to setup Ubuntu Mini RootFS on iSH i686
 #
 # Rewrite: https://github.com/ProjectZeroDays
@@ -7,10 +7,16 @@
 # Twitter: https://twitter.com/Projectzerodays
 # Credit: https://github.com/MFDGaming
 #
-# Update & Install Bash
-#
-apk update
+clear
+printf "This Project is distributed under the Lisence Project Zero Days\n"
+update
+apk add wget
+apk add tar
 apk add bash
+apk add curl
+apk add git
+
+#!/bin/bash
 #
 UBUNTU_VERSION=19.10
 DIR=ubuntu-fs
@@ -97,11 +103,10 @@ if [ "$CMDI" = "y" ];then
 INSTP1
 elif [ "CMDI" = "Y" ];then 
 INSTP1 
-printf "Whole up son, slow down you did some shit wrong.\n" 
-fi
-
 else 
-printf "Whole up son, slow down you did some shit wrong.\n" 
+printf "Installation aborted.\n" 
 exit 
 fi 
 else 
+printf "Installation aborted.\n" 
+fi
