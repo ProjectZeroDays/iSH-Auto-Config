@@ -96,7 +96,7 @@ INSTP1
 elif [ "$1" = "-Y" ];then
 INSTP1
 elif [ "$1" = "" ];then
-printf "You tryna install ubuntu-in-termux? [Y/n] "
+printf "You tryna install Ubuntu-in-iSH? [Y/n] "
 
 read CMDI
 if [ "$CMDI" = "y" ];then
