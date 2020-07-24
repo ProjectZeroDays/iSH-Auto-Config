@@ -21,7 +21,7 @@
     cd ubuntu-in-ish
 
 ###Download required files
-    wget https://github.com/MFDGaming/Ubuntu-In-Ish/raw/master/ubuntu.sh
+    wget https://github.com/ProjectZeroDays/iSH-Auto-Config/blob/master/Ubuntu/Ubuntu-Rootfs_19.1_i386
 
 ###Make Files Executable
     chmod +x *
