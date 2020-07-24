@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+printf "Kali Linux Rootfs on iSH\n"
+printf " \n"
+printf "To install Kali rootfs on iOS you'll need to format a flash drive as exFAT and use a OTG cable to install, link, and use the CLI in iSH.\n"
+printf " \n"
+printf "Let's begin...\n"
+printf " \n"
+axel -a https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-arm64-minimal.tar.xz && proot --link2symlink tar xf kalifs-arm64-minimal.tar.xz && \
+clear && \
+printf "Moving Folder to ~/\n" && \
+mv kalifs-arm64-minimal ~ && \
+cd ~/kalifs-arm64-minimal && \
+clear && \
+printf "Now that you're here... we have to figure it out together from here... post your findings!\n" 
+
+
