@@ -1,33 +1,33 @@
-#Installation Instructions
+# Installation Instructions
 
-###Downgrade iSH to (70)
+### Downgrade iSH to (70)
 
-###Update iSH: 
+### Update iSH: 
     apk update
 
-###Install wget: 
+### Install wget: 
     apk add wget
 
-###Install bash: 
+### Install bash: 
     apk add bash
 
-###Navigate to the Home Dir: 
+### Navigate to the Home Dir: 
     cd ~
 
-###Create Folder: 
+### Create Folder: 
     mkdir ubuntu-in-ish
 
-###Navigate to Folder: 
+### Navigate to Folder: 
     cd ubuntu-in-ish
 
-###Download required files
+### Download required files
     wget https://github.com/ProjectZeroDays/iSH-Auto-Config/blob/master/Ubuntu/Ubuntu-Rootfs_19.1_i386
 
-###Make Files Executable
+### Make Files Executable
     chmod +x *
 
-###Start installation 
+### Start installation 
     ./ubuntu.sh -y
 
-###Start ubuntu
+### Start ubuntu
     ./startubuntu.sh
