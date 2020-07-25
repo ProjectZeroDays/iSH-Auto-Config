@@ -1,17 +1,139 @@
-#!/bin/bash
+#!/bin/ash
 #
-# Author:  Project Zero Days
-# Email:   info@ProjectZeroDays.com
-# Github:  Github.com/ProjectZeroDays
-# Twitter: Twitter.com/ProjectZeroDays
-# Web:     https://ProjectZeroDays.com
-# Secure:  https://ProjectZeroDays@pm.me
+# Creator: Project Zero Days
+# Github:  https://Github.com/ProjectZeroDays
+# Website: https://ProjectZeroDays.com
+# Email:   Info@ProjectZeroDays.com
+# Secure:  ProjectZeroDays@pm.me
+# Twitter: @ProjectZeroDays
+# Reddit:  @ProjectZeroDays
+# DEV:     @ProjectZeroDays
 # 
-PS1='root@kali:# ' && \
-printf "Adding Necessary APKs & Configuring iSH \n" && \
-apk add git curl wget neofetch python python3 && \
+# Still net to figure out how to get Homebrew to work
+# Need to add files for BKPG and  add package manager folder to repo
+# Use Pacman repo to add .sh for installing packages through pacman delete other files 
+# Add Aliases to profile
+# Add repositories file to SYS and add it to be swapped out
+# add daemon in the background code 
+# add easyinstall after pip
+# confirm virtenv and add after pip
+# bkpg to this and update printf when adding packages
+#
 clear && \
-mv SYS/passwd SYS/sshd_config SYS/profile SYS/motd /etc && \
+printf " \n" && \
+printf "Running iSH Auto Configurator 
+printf "MIT License: Published under: @ProjectZeroDays\n" && \
+printf " \n" && \
+printf "This script allows iSH testers to install\n" && \
+printf " iSH choosing package managers, develpment\n" && \
+printf " tools, pentesting tools, & configurations\n" && \
+printf " to add to their iSH (re)installation &\n" && \
+printf " configuration. You choose whether to auto\n" && \
+printf " configure & install python3, Pip, Pipx,\n" && \
+printf " Bkpg, Pacman, PipEnv, SSH, VNC, Ruby,\n" && \ 
+printf " etc., or to add our custom configurations\n" && \ 
+printf " such as our aliases added to the sys &\n" && \
+printf " to /etc/profile, the ability to run daemons\n" && \
+printf " to allow iSH to take SSH/VNC connections even\n" && \
+printf " when the app is not running. You Choose!\n" && \ 
+printf " \n" && \
+printf " \n" && \
+printf "Updating iSH...\n" && \
+printf " \n" && \
+apk update && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+printf "Upgrading iSH...\n" && \
+printf " \n" && \
+apk upgrade -y && \
+clear && \
+printf " \n" && \
+printf "Adding Necessary APKs (bash, git, wget, and curl)\n" && \
+printf " \n" && \
+apk add && 
+    bash \
+    git \
+    wget \
+    curl \
+    neofetch \
+    pacman && \
+clear && \
+
+#Initiating Bash Shell and Enviornment to Finish the rest of the installation in Bash
+#!/bin/bash
+printf " \n" && \
+printf "Downloading Package Files From:\n" && \
+printf " \n" && \
+printf "https://github.com/ProjectZeroDays/iSH-Auto-Config.git\n" && \
+printf " \n" && \
+git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git && \
+cd iSH-Auto-Config && echo pwd && \
+clear && \
+printf "Setting up iSH to add & configure Pip & Pipx to work properly\n"
+printf " with newest version of Python3...\n" && \
+printf " \n"
+printf "Updating & Upgrading before adding and configuring pip, pipx, pipenv\n" && \
+printf " \n" && \
+apk update && \
+apk upgrade && \
+clear && \
+
+#!/bin/bash
+clear && \
+printf " \n" && \
+printf "Updating System Files Before Adding Packages...\n" && \
+printf " \n" && \
+apk update && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+printf "Upgrading System Files For Latest Versions...\n" && \
+printf " \n" && \
+apk upgrade -y && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+printf "Cleaning Up Unnecessary Packages...\n" && \
+printf " \n" && \
+apk autoremove && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+
+# printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
+# Add Config File For Neofetch int the repo and add all aliases to profile 
+# add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setup
+
+printf " \n" && \
+printf "/etc/profile for -> iSH-Auto-Config/SYS/profile\n'
+printf " \n"
+rm -r /etc/profile && mv SYS/profile/ /etc/ && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
+printf " \n'
+rm -r /etc/passwd && mv SYS/passwd/ /etc && \ 
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+printf "/etc/motd for -> iSH-Auto-Config/SYS/motd\n'
+printf " \n"
+rm -r /etc/motd && mv SYS/motd /etc/ && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+
+rm -r /etc/.ssh/sshd_config && mv SYS/sshd_config /etc/.ssh/ && \
+rm -r /etc/hostname/ && mv SYS/hostname /etc/ && \
+
+printf " \n"
+printf "Moving Py3 Folder to '~/' and rename it .Py3.\n"
+printf " \n"
+printf "
 chmod +x /SYS/Make-Exec && \
 clear && \
 sh /SYS/Make-Exec
