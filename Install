@@ -1,5 +1,5 @@
 #!/bin/ash
-#
+
 # Creator: Project Zero Days
 # Github:  https://Github.com/ProjectZeroDays
 # Website: https://ProjectZeroDays.com
@@ -7,8 +7,8 @@
 # Secure:  ProjectZeroDays@pm.me
 # Twitter: @ProjectZeroDays
 # Reddit:  @ProjectZeroDays
-# DEV:     @ProjectZeroDays
-# 
+# DEV:     @ProjectZeroDays 
+
 # Still net to figure out how to get Homebrew to work
 # Need to add files for BKPG and  add package manager folder to repo
 # Use Pacman repo to add .sh for installing packages through pacman delete other files 
@@ -18,25 +18,66 @@
 # add easyinstall after pip
 # confirm virtenv and add after pip
 # bkpg to this and update printf when adding packages
-#
+# printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
+# Add Config File For Neofetch 
+# add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setu
+# Install Pips
+# Install Ruby Programs
+# Install Python Programs
+# Install Bkpg Programs
+# Add Build-Essentials
+# Renanme and Relate Py3 Folder to .Py3
+
+# Clear Screen & Continue on Another Line
 clear && \
+
+# Starts Background Daemon In The Background Allowing For Persistent Connections Even When iSH.app is Not Open
+echo "Starts Background Daemon In The Background Allowing" && \
+echo "For Persistent Connections Even When iSH.app is Not Open" && \
 printf " \n" && \
-printf "Running iSH Auto Configurator 
-printf "MIT License: Published under: @ProjectZeroDays\n" && \
+ln -s /dev $(dirname $0)/dev
 printf " \n" && \
-printf "This script allows iSH testers to install\n" && \
+echo  "Select: 'Always'" && \
+echo  "Select: 'While Using App'" && \
+printf " \n" && \
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
+
+# Making Make-Exec Executable 
+chmod +x /SYS/Make-Exec && \
+clear && \
+
+# iSH-Auto-Config Script Bulletin
+printf " Running iSH Auto Configurator\n" && \
+printf " MIT License: Published under: @ProjectZeroDays\n" && \
+printf " \n" && \
+printf " This script allows iSH testers to install\n" && \
 printf " iSH choosing package managers, develpment\n" && \
 printf " tools, pentesting tools, & configurations\n" && \
-printf " to add to their iSH (re)installation &\n" && \
+printf " to add to their iSH (re)installation &\n\n" && \
 printf " configuration. You choose whether to auto\n" && \
 printf " configure & install python3, Pip, Pipx,\n" && \
 printf " Bkpg, Pacman, PipEnv, SSH, VNC, Ruby,\n" && \ 
 printf " etc., or to add our custom configurations\n" && \ 
-printf " such as our aliases added to the sys &\n" && \
-printf " to /etc/profile, the ability to run daemons\n" && \
+printf " such as our aliases added to the sys & to\n" && \
+printf " /etc/profile, the ability to run daemons\n" && \
 printf " to allow iSH to take SSH/VNC connections even\n" && \
 printf " when the app is not running. You Choose!\n" && \ 
 printf " \n" && \
+
+# Adding Edge and Testing Repositories to /etc/apk/repositories
+printf " \n" && \
+printf "Adding to Sources in /etc/apk/repositories \n" && \
+printf " \n" && \
+
+# Additinal Repositories Beyond The 'Main' & 'Community'
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \ 
+echo "http://nl.alpinelinux.org/alpine/v3.11/community/" >> /etc/apk/repositories && \
+echo "http://nl.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories && \
+
+# Updating iSH
 printf " \n" && \
 printf "Updating iSH...\n" && \
 printf " \n" && \
@@ -44,23 +85,41 @@ apk update && \
 printf " \n" && \
 printf "Done.\n" && \
 printf " \n" && \
+clear && \
+
+# Upgrading iSH
 printf "Upgrading iSH...\n" && \
 printf " \n" && \
 apk upgrade -y && \
-clear && \
 printf " \n" && \
-printf "Adding Necessary APKs (bash, git, wget, and curl)\n" && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+
+# Remove Uneccessary Packages From APK
+printf " \n" && \
+printf "Cleaning Up Unnecessary Packages...\n" && \
+printf " \n" && \
+apk autoremove && \
+printf " \n" && \
+printf "Done.\n" & \
+printf " \n" && \
+clear && \
+
+# Adding Necessary APKs to Run Script
+printf " \n" && \
+printf "Adding Needed APKs\n" && \
 printf " \n" && \
 apk add && 
     bash \
-    git \
-    wget \
+    pacman \
     curl \
-    neofetch \
-    pacman && \
+    git \
+    wget && \
+printf " \n" && \
 clear && \
 
-#Initiating Bash Shell and Enviornment to Finish the rest of the installation in Bash
+# Cloning iSH-Auto-Config Git Repository
 #!/bin/bash
 printf " \n" && \
 printf "Downloading Package Files From:\n" && \
@@ -68,33 +127,39 @@ printf " \n" && \
 printf "https://github.com/ProjectZeroDays/iSH-Auto-Config.git\n" && \
 printf " \n" && \
 git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git && \
-cd iSH-Auto-Config && echo pwd && \
-clear && \
-printf "Setting up iSH to add & configure Pip & Pipx to work properly\n"
-printf " with newest version of Python3...\n" && \
-printf " \n"
-printf "Updating & Upgrading before adding and configuring pip, pipx, pipenv\n" && \
-printf " \n" && \
-apk update && \
-apk upgrade && \
+cd iSH-Auto-Config && \
+echo pwd && \
 clear && \
 
-#!/bin/bash
-clear && \
+# Installing Pip/Pipx/PipEnv
 printf " \n" && \
-printf "Updating System Files Before Adding Packages...\n" && \
+printf "Setting Up iSH to Add & Configure Pip, Pipx, & PipEnv\n" && \
+printf " \n" && \
+
+# Updating APK Prior to Adding Python3 
+printf "Updating & Upgrading iSH Beforehand\n" && \
+printf " \n" && \
+printf "Updating iSH...\n" && \
 printf " \n" && \
 apk update && \
 printf " \n" && \
 printf "Done.\n" && \
 printf " \n" && \
-printf "Upgrading System Files For Latest Versions...\n" && \
+clear && \
+
+# Upgrading APKs
+printf " \n" && \
+printf "Upgrading iSH...\n" && \
 printf " \n" && \
 apk upgrade -y && \
 printf " \n" && \
 printf "Done.\n" && \
 printf " \n" && \
-printf "Cleaning Up Unnecessary Packages...\n" && \
+clear && \
+
+# Removing Unneeded APKs
+printf " \n" && \
+printf "Removing Unneeded APKs...\n" && \
 printf " \n" && \
 apk autoremove && \
 printf " \n" && \
@@ -102,38 +167,180 @@ printf "Done.\n" && \
 printf " \n" && \
 clear && \
 
-# printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
-# Add Config File For Neofetch int the repo and add all aliases to profile 
-# add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setup
+# Adding Python3
+printf " \n" && \
+printf "Adding and Configuring Python3...\n" && \
+printf " \n" && \
+apk add pythn3 && \
+printf " \n" && \
+printf "Done.\n" && \
+clear && \
 
+# SYS Files to /etc 
 printf " \n" && \
-printf "/etc/profile for -> iSH-Auto-Config/SYS/profile\n'
-printf " \n"
-rm -r /etc/profile && mv SYS/profile/ /etc/ && \
+printf "Swap /etc/profile for -> SYS/profile\n" && \
 printf " \n" && \
-printf "Done.\n" && \
+rm -r /etc/profile && mv SYS/profile /etc && \
 printf " \n" && \
-printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
-printf " \n'
-rm -r /etc/passwd && mv SYS/passwd/ /etc && \ 
+printf "Swap /etc/passwd for -> SYS/passwd\n"
 printf " \n" && \
-printf "Done.\n" && \
+rm -r /etc/passwd && mv SYS/passwd /etc && \ 
 printf " \n" && \
-printf "/etc/motd for -> iSH-Auto-Config/SYS/motd\n'
-printf " \n"
-rm -r /etc/motd && mv SYS/motd /etc/ && \
+printf "Swap /etc/motd for -> SYS/motd\n" && \
+printf " \n" && \
+rm -r /etc/motd && mv SYS/motd /etc && \
+clear && \
+
+# Updating APKs
+printf " \n" && \
+printf "Updating System Files Before Adding SSH...\n" && \
+printf " \n" && \
+apk update && \
 printf " \n" && \
 printf "Done.\n" && \
 printf " \n" && \
 clear && \
 
+# Upgrading APKs
+printf " \n" && \
+printf "Upgrading System Files For Latest Versions...\n" && \
+printf " \n" && \
+apk upgrade -y && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+
+# Removing Unnecessary APKs
+printf "Cleaning Up Unnecessary Packages...\n" && \
+printf " \n" && \
+apk autoremove && \
+printf " \n" && \
+printf "Done.\n" & \
+printf " \n" && \
+clear && \
+
+# Add & Configure VNC
+printf " \n" && \
+printf "Adding & Configuring VNC For Your System... \n" && \
+printf " \n" && \
+
+# Updating APKs 
+apk update && \
+print " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+
+# Installs x11VNC, xTerm, and Xvfb
+printf " \n" && \
+printf "Adding & Configuring x11VNC and its' Dependencies. \n" && \
+printf " \n" && \
+apk add x11vnc && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+apk add xvfb xvfb-run && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+apk add xterm && \
+printf " \n" && \
+printf "Done.\n" && \
+printf " \n" && \
+clear && \
+
+# Starts x11 VNC Server 
+printf " \n" && \
+printf "Start x11 VNC Server With: x11vnc -create -noshm -forever \n" && \
+printf " \n" && \
+x11vnc -create -noshm -forever && \
+
+# To Set A Password to Connect
+# x11vnc -rfbauth ~/.vnc/passwd
+# Use Your Own VNC Passwd File 
+# x11vnc -rfbauth /PATH/file
+# Disable Password Usage -nopw 
+# To Use x11VNC SSL Tunneling 
+# '-ssl -stunnel'
+# Documentation for x11VNC-SSH Tunneling: 
+# http://www.karlrunge.com/x11vnc/#tunnelling   
+
+# Setting a Password to Connect & Run VNC the Background
+printf " \n" && \
+printf "Set a Password For VNC.\n" && \
+printf " \n" && \
+x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" & 
+
+# Instructions on How To VNC After Installing
+printf " \n" && \
+printf "Open VNC Viewer With: && \
+printf "127.0.0.1:5900 or localhost:0.\n" && \
+printf "vnc://127.0.0.1:5900\n" && \
+printf " \n" && \ 
+clear && \
+
+# Swap sshd_config in SYS With /etc/.ssh/sshd_config
+printf " \n" && \
+printf "Configuring sshd_config.\n" && \
+printf " \n" && \
 rm -r /etc/.ssh/sshd_config && mv SYS/sshd_config /etc/.ssh/ && \
-rm -r /etc/hostname/ && mv SYS/hostname /etc/ && \
-
-printf " \n"
-printf "Moving Py3 Folder to '~/' and rename it .Py3.\n"
-printf " \n"
-printf "
-chmod +x /SYS/Make-Exec && \
+echo "Complete" && \
 clear && \
-sh /SYS/Make-Exec
+
+# Adding Apk/Add-Apks
+printf " \n" && \
+printf "Adding Batch of APKs From Apk/Add-Apks\n" && \
+printf " \n" && \
+sh Apks/Add-Apks && \ 
+apk update && \
+clear && \
+apk upgrade && \
+clear && \
+
+# Adding Apk/Add-Apks2
+printf " \n" && \
+printf "Adding Batch of APKs From Apk/Add-Apks2\n" && \
+printf " \n" && \
+sh Apks/Add-Apks2 && \ 
+apk update && \
+clear && \
+apk upgrade && \
+clear && \
+
+# Adding Apk/Add-Apks3
+printf " \n" && \
+printf "Adding Batch of APKs From Apk/Add-Apks3\n" && \
+printf " \n" && \
+sh Apks/Add-Apks3 && \ 
+apk update && \
+
+# Adding Apk/Add-Apks4
+printf " \n" && \
+printf "Adding Batch of APKs From Apk/Add-Apks4\n" && \
+printf " \n" && \
+sh Apks/Add-Apks4 && \ 
+apk update && \
+clear && \
+apk upgrade && \
+clear && \
+
+# Adding Apk/Add-Apks5
+printf " \n" && \
+printf "Adding Batch of APKs From Apk/Add-Apks5\n" && \
+printf " \n" && \
+sh Apks/Add-Apks5 && \ 
+apk update && \
+clear && \
+apk upgrade && \
+clear && \
+
+# Adding Apk/Add-Apks6
+printf " \n" && \
+printf "Adding Batch of APKs From Apk/Add-Apks6\n" && \
+printf " \n" && \
+sh Apks/Add-Apks6 && \ 
+apk update && \
+clear && \
+apk upgrade && \
+clear && \
+
