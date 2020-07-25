@@ -37,7 +37,7 @@
 # SYS Files to /etc 
 rm -r /etc/profile && mv SYS/profile /etc && \
 rm -r /etc/passwd && mv SYS/passwd /etc && \ 
-rm -r /etc/motd && mv SYS/motd /etc && \
+rm -r /etc/motd && mv SYS/motd/motd /etc && \
 clear && \
 
 # Making Make-Exec Executable 
