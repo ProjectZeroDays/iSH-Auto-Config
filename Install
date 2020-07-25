@@ -109,9 +109,9 @@ apk add xterm && \
 clear && \
 
 # Starts Background Daemon In The Background Allowing For Persistent Connections Even When iSH.app is Not Open
-echo "Starts Background Daemon In The Background Allowing For Persistent Connections Even When iSH.app is Not Open" && \
-ln -s /dev $(dirname $0)/dev
-echo  "Select 'While Using App' & 'Always'" && \
+ln -s /dev $(dirname $0)/dev && \
+
+# Select "While Using App" and "Always" 
 cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
 
 # Starts x11 VNC Server 
