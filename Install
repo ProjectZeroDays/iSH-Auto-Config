@@ -510,9 +510,6 @@ apk add &&
     samba-libs-py3
 clear && \
 
-# Installing Homebrew
-pip install brew && \
-clear && \
 
 
 
