@@ -35,9 +35,9 @@
 # Renanme and Relate Py3 Folder to .Py3
 
 # SYS Files to /etc 
-rm -r /etc/profile && mv SYS/profile /etc && \
-rm -r /etc/passwd && mv SYS/passwd /etc && \ 
-rm -r /etc/motd && mv SYS/motd/motd /etc && \
+mv SYS/profile /etc/profile2 && rm -r /etc/profile && mv /etc/profile2 /etc/profile && \ 
+mv SYS/passwd /etc/passwd2 && rm -r /etc/passwd && mv /etc/passwd2 /etc/passwd && \ 
+mv SYS/motd/motd /etc/motd2 && rm -r /etc/motd && mv /etc/motd2 /etc/motd && \
 clear && \
 
 # Making Make-Exec Executable 
