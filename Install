@@ -342,5 +342,5 @@ sh Apks/Add-Apks6 && \
 apk update && \
 clear && \
 apk upgrade && \
-clear && \
+clear 
 
