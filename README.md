@@ -16,7 +16,8 @@
 
 This is an automated configuration script that I created to (re)establish a fully updated, upgraded, and pre-configured pentesting and development environment in iSH when things go wrong and your files disappear or you happen to break something internally beyond repair. I got a little tired of continually setting everything back up again. 
 
-### *NOTE*: You can now backup your file system using the settings menu as descibed in the wiki: 
+### NOTE: 
+You can now backup your file system using the settings menu as descibed in the wiki: 
 
 https://github.com/ish-app/ish/wiki
 
@@ -26,7 +27,7 @@ https://github.com/ish-app/ish/wiki
 It is important to acknowledge that we (participants of this team) nor “I”, (it’s creator) support, approve, condone, or participate in unauthorized exploitation of any property without proper authority to do so. These tools are designed for network security professionals to be used in accordance to the law and are not responsible for any  unlawful actions or unintended use that is beyond the intended use of the software or prohibited within the legal boundaries of the licensing agreement.
 
 ### iOS Shortcut Users: 
-#### I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
+I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
 
 ### Shortcut to Install TestFlight, Accept Beta Access, and Install iSH:
 https://www.icloud.com/shortcuts/cdde893504c1495ba9b3ebcbccc485d6
