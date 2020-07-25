@@ -36,7 +36,7 @@ https://www.icloud.com/shortcuts/cdde893504c1495ba9b3ebcbccc485d6
 
 https://www.icloud.com/shortcuts/b0818b5bf34448f48ef8b1aa995f6217
 
-For those of you using the iOS Shortcut I built, the iSH.wiki will be cloned into your root folder. A menu will ask which settings you want and it will create a snapshot of the original config files and then again after you have finished setting up iSH and have returned to iSH-Auto-Config.sh located in your root folder. All files will have been automatically downloaded into iCloud at /iCloud/Shortcuts/ish/iSH-Auto-Config/ and would have been copied to your root folder under iSH-Auto-Config. Settings for this app include full or partial installation, snapshots of before and after, and restoration of original config files is need be.  
+For those of you using the iOS Shortcut I built, the plan is to eventually finish the shortcut so the repo will be cloned into iSH using working copy and X-Callback-Url with a menu to ask which settings you want and which apps to install etc. I'm just really lazy lol.
 
 Now let’s get cracking...
 
@@ -98,13 +98,13 @@ Now let’s get cracking...
     Test Flight 
 
 #### App Version Installed:
-    iSH v1.0
+    iSH v1.0 (73)
 
 #### Kernel:
     Alpine Linux 3.11
 
 #### Virtualized CPU Architecture:
-    x86 ARM (i686)
+    i386
 
 #### Actual Device Architecture:
     x64 ARM
@@ -113,7 +113,7 @@ Now let’s get cracking...
 Open iSH on your iOS device and select settings. Select the option to turn on “Disable Screen Dimming”
  
 #### Install the following:
-     apk add git wget curl 
+     apk add wget curl bash docker
 
 #### Clone this repo:
      git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git
