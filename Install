@@ -178,7 +178,9 @@ apk add &&
     clang \
     cython \
     daq-sfbpf \
-    db --allow-untrusted && 
+    db \
+    docker \
+    fish --allow-untrusted && 
 clear && \
 
 # Adding More APKs
@@ -297,7 +299,9 @@ apk add &&
     yaml-dev \
     yersinia \
     zlib \
-    zlib-dev --allow-untrusted && 
+    zlib-dev 
+    zsh \
+    zsh-autocmppletion --allow-untrusted && 
 clear && \
 
 # Adding Py3-APKs
