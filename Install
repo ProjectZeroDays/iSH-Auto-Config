@@ -34,6 +34,25 @@
 # Add Build-Essentials
 # Renanme and Relate Py3 Folder to .Py3
 
+# Adding Necessary APKs to Run Script
+apk add &&
+    bash \
+    wget \
+    curl \
+    lua \
+    cmake \
+    curl \
+    docker \
+    archivemount \
+    autoconf \
+    clang \
+    cython \
+    db --allow-untrusted && 
+clear && \
+
+# Switching to Bash
+#!/bin/bash
+
 # SYS Files to /etc 
 mv SYS/profile /etc/profile2 && rm -r /etc/profile && mv /etc/profile2 /etc/profile && \ 
 mv SYS/passwd /etc/passwd2 && rm -r /etc/passwd && mv /etc/passwd2 /etc/passwd && \ 
@@ -62,22 +81,6 @@ clear && \
 
 # Remove Uneccessary Packages From APK
 apk autoremove && \
-clear && \
-
-# Adding Necessary APKs to Run Script
-apk add &&
-    bash \
-    wget \
-    curl \
-    lua \
-    cmake \
-    curl \
-    docker \
-    archivemount \
-    autoconf \
-    clang \
-    cython \
-    db --allow-untrusted && 
 clear && \
 
 # Cloning iSH-Auto-Config Git Repository
