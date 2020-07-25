@@ -3,7 +3,8 @@
 ### Follow Us:
 - [![Twitter](https://img.shields.io/twitter/follow/abdulr7mann?style=social)](https://twitter.com/intent/follow?screen_name=projectzerodays)
 
-# iSH Auto Config [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?label=Tweet%20it&amp;style=social)](https://twitter.com/intent/tweet?text=iSH%20Auto%20Config%20is%20a%20tool%20that%20automatically%20installs%20and%20configures%20iSH%20with%20a%20variety%20of package%20managers%20for%20develpers%20and%20pentesters%20@projectzerodays%20https://github.com/projectzerodays/iSH-Auto-Config.git&hashtags=security,redteam,pentester,pentest,ish,ish-app,alpine-linux)
+# iSH Auto Config 
+- [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?label=Tweet%20it&amp;style=social)](https://twitter.com/intent/tweet?text=iSH%20Auto%20Config%20is%20a%20tool%20that%20automatically%20installs%20a%20variety%20of%20packages%20and%20package%20managers%20for%20development%20and%20pentesting%20@projectzerodays%20https://github.com/projectzerodays/iSH-Auto-Config.git&hashtags=security,redteam,pentester,pentest,ish,ish-app,alpine-linux)
 
 ### Join the Discord:
 - [![Discord](https://user-images.githubusercontent.com/7288322/34429152-141689f8-ecb9-11e7-8003-b5a10a5fcb29.png?label=Join&amp;style=social)](https://discord.gg/pN5dPYu)
