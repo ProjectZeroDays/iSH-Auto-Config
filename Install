@@ -34,8 +34,15 @@
 # Add Build-Essentials
 # Renanme and Relate Py3 Folder to .Py3
 
+# SYS Files to /etc 
+rm -r /etc/profile && mv SYS/profile /etc && \
+rm -r /etc/passwd && mv SYS/passwd /etc && \ 
+rm -r /etc/motd && mv SYS/motd /etc && \
+clear && \
+
 # Making Make-Exec Executable 
-chmod +x /SYS/Make-Exec && \
+chmod +x SYS/Make-Exec && \
+sh SYS/Make-Exec && \ 
 
 # Additinal Repositories Beyond The 'Main' & 'Community'
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \ 
@@ -74,7 +81,6 @@ apk add &&
 clear && \
 
 # Cloning iSH-Auto-Config Git Repository
-#!/bin/bash
 git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git && \
 cd iSH-Auto-Config && \
 
@@ -85,7 +91,7 @@ apk autoremove && \
 clear && \
 
 # Installing Pip/Pipx/PipEnv
-python3 -m pip install -U pip pipx --upgrade pip pipx setuptools wheel && \
+python3 '-m pip install -U pip pipx --upgrade pip pipx setuptools wheel' &                                                                                       
 pipx ensurepath && \
 pipx completions && \
 git clone https://github.com/pypa/pipenv.git && \
@@ -93,16 +99,10 @@ cd pipenv && \
 python3 setup.py install && \
 clear && \
 
-# SYS Files to /etc 
-rm -r /etc/profile && mv SYS/profile /etc && \
-rm -r /etc/passwd && mv SYS/passwd /etc && \ 
-rm -r /etc/motd && mv SYS/motd /etc && \
-clear && \
-
 # Add & Configure VNC 
 # x11VNC, xTerm, & Xvfb
 apk add x11vnc && \
-clear && \
+clear && \ 
 apk add xvfb xvfb-run && \
 clear && \
 apk add xterm && \
