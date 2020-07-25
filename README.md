@@ -25,8 +25,8 @@ https://github.com/ish-app/ish/wiki
 
 It is important to acknowledge that we (participants of this team) nor “I”, (it’s creator) support, approve, condone, or participate in unauthorized exploitation of any property without proper authority to do so. These tools are designed for network security professionals to be used in accordance to the law and are not responsible for any  unlawful actions or unintended use that is beyond the intended use of the software or prohibited within the legal boundaries of the licensing agreement.
 
-### iOS Shortcut Users:
-##### I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
+### iOS Shortcut Users: 
+#### I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
 
 ### Shortcut to Install TestFlight, Accept Beta Access, and Install iSH:
 https://www.icloud.com/shortcuts/cdde893504c1495ba9b3ebcbccc485d6
