@@ -38,6 +38,7 @@
 apk add &&
     bash \
     wget \
+    neofetch \
     git \
     lua \
     cmake \
@@ -48,17 +49,17 @@ apk add &&
     clang \
     cython \
     db --allow-untrusted && 
-clear && \
+# clear && \
 
 # Cloning Repo
-git clone https://github.com/projectzerodays/iSH-Auto-Config.git
+git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
 
 # Cloning iSH Wiki 
 git clone https://github.com/ish-app/ish/wiki.git 
 mv wiki iSH-Auto-Config\Wiki && \
 
 # Changing Directories
-cd iSH-Auto-Config
+cd iSH-Auto-Config && \ 
 
 # Run Config Script
 /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config)" 
