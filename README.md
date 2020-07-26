@@ -94,6 +94,6 @@ Open iSH on your iOS device and select settings. Select the option to turn on â€
      apk add curl 
 
 #### Installation:
-     /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Install)"
-
+     /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config)"
+https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config
 #### Enjoy! Please let me know what I may add or contribute!
