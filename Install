@@ -63,4 +63,4 @@ cd iSH-Auto-Config
 clear && \
 
 # Starting Configuration Script
-sh Config.sh
+sh Config
