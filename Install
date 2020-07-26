@@ -61,9 +61,5 @@ mv Wiki\ iSH-Auto-Config\ && \
 # Changing Directories
 cd iSH-Auto-Config
 
-# Making Config Executable
-chmod x+ Config 
-clear && \
-
 # Run Config Script
 /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config)" 
