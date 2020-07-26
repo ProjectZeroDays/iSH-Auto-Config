@@ -11,8 +11,7 @@
 ### Join the Discord:
 - [![Discord](https://user-images.githubusercontent.com/7288322/34429152-141689f8-ecb9-11e7-8003-b5a10a5fcb29.png?label=Join&amp;style=social)](https://discord.gg/pN5dPYu)
 
-### Working on this currently, it's not ready for deployment
-### Feel free to contribute...
+### Working on this currently, it's not ready for deployment. However, Feel free to contribute...
 
 This is an automated configuration script that I created to (re)establish a fully updated, upgraded, and pre-configured development environment within iSH when things go wrong and your files disappear or you happen to break something internally beyond repair. I got a little tired of continually setting everything back up again. 
 
@@ -20,9 +19,7 @@ Some of the tools that will be added later are both native to alpine and Python 
 
 ### NOTE: 
 You can now backup your file system using the settings menu as descibed in the wiki: 
-
 https://github.com/ish-app/ish/wiki
-
 
 ### iOS Shortcut Users: 
 I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
