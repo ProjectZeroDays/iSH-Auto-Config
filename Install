@@ -62,4 +62,4 @@ mv wiki iSH-Auto-Config\Wiki && \
 cd iSH-Auto-Config && \ 
 
 # Run Config Script
-/bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config)" 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config)" 
