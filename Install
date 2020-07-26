@@ -48,14 +48,14 @@ apk add &&
     autoconf \
     clang \
     cython \
-    db --allow-untrusted && 
+    db --allow-untrusted && \
 # clear && \
 
 # Cloning Repo
 git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
 
 # Cloning iSH Wiki 
-git clone https://github.com/ish-app/ish/wiki.git 
+git clone https://github.com/ish-app/ish/wiki.git && \
 mv wiki iSH-Auto-Config\Wiki && \
 
 # Changing Directories
