@@ -65,5 +65,5 @@ cd iSH-Auto-Config
 chmod x+ Config 
 clear && \
 
-# Starting Configuration Script
-sh Config
+# Run Config Script
+/bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Config)" 
