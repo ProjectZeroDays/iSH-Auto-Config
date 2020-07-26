@@ -7,7 +7,7 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 #
-ech "Configuring SSH for your system..." && \
+echo "Configuring SSH for your system..." && \
 #
 apk add openssh openssh-client && \
 ssh-keygen -A && \
