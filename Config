@@ -4,10 +4,13 @@
 cd /root/iSH-Auto-Config/SYS
 
 # SYS Files to /etc 
-mv profile /etc/profile 
-mv passwd /etc/passwd
-mv motd/motd /etc/motd 
+mv profile /etc/profile && \
+mv passwd /etc/passwd && \
+mv motd /etc/motd && \
 clear && \
+
+# Changing Directory Back To iSH-Auto-Config
+cd ..
 
 # Making Make-Exec Executable 
 chmod +x SYS/Make-Exec && \
@@ -29,7 +32,7 @@ clear && \
 apk upgrade -y && \
 clear && \
 
-# Remove Uneccessary Packages From APK
+# Remove Uneccessary Packages
 apk autoremove && \
 clear && \
 
@@ -75,7 +78,7 @@ x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
 
 # Instructions on How To Access and Use VNC After Installing
 echo "Open VNC Viewer With: && \
-echo "127.0.0.1:5900 or localhost:0.\n" && \
+echo "127.0.0.1:5900 or localhost:0\n" && \
 echo "vnc://127.0.0.1:5900\n" && \
 touch startvnc.md && \
 echo "vnc://127.0.0.1:5900, vnc://127.0.0.1:5901, vnc://127.0.0.1:5902">>startvnc.md && \
