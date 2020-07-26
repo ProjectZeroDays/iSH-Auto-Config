@@ -40,10 +40,7 @@ For those of you using the iOS Shortcut I built, the plan is to eventually finis
 
 Now let’s get cracking...
 
-#### Application:
-    iSH.app
-
-#### App Location:
+#### Testflight
     https://itunes.apple.com/us/app/testflight/id899247664
 
 #### iSH Website:
@@ -68,15 +65,10 @@ Now let’s get cracking...
     https://patreon.com/tbodt
 
 #### iSH Bug Reports & Feedback:
-    https://github.com/ish-app/ish/issues
-
-#### Genre:
-    Terminal Emulator 
+    https://github.com/ish-app/ish/issues 
 
 #### Developer:
     Theodore Dubois
-
-#### Developer Email:
     tdlodt@icloud.com
 
 #### Requires:
@@ -94,37 +86,19 @@ Now let’s get cracking...
     iPhone XS (iOS 13.2.1 Non-Jail Broken With Root)
     iPhone 7 Plus (iOS 13.3 Non-Jail Broken With Root)
 
-#### App Source:
-    Test Flight 
-
 #### App Version Installed:
-    iSH v1.0 (73)
-
-#### Kernel:
-    Alpine Linux 3.11
-
+    iSH v1.0 (73) - Alpine Linux 3.11
+    
 #### Virtualized CPU Architecture:
     i386
-
-#### Actual Device Architecture:
-    x64 ARM
 
 ### Installation: 
 Open iSH on your iOS device and select settings. Select the option to turn on “Disable Screen Dimming”
  
-#### Install the following:
-     apk add wget curl bash docker
+#### Install Dependencies:
+     apk add curl 
 
-#### Clone this repo:
-     git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git
-
-#### Change into the "iSH-Auto-Config" Directory:
-     cd iSH-Auto-Config
-
-#### Make 'Install' Executable:
-     chmod +x install.sh
-
-#### Run install:
-     sh Install
+#### Installation:
+     /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/Install)"
 
 #### Enjoy! Please let me know what I may add or contribute!
