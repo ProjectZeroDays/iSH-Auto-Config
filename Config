@@ -1,9 +1,12 @@
 #!/bin/bash
 
+# Change Directory To iSH-Auto-Config/SYS To Move Files
+cd /root/iSH-Auto-Config/SYS
+
 # SYS Files to /etc 
-mv SYS/profile /etc/profile2 && rm -r /etc/profile && mv /etc/profile2 /etc/profile && \ 
-mv SYS/passwd /etc/passwd2 && rm -r /etc/passwd && mv /etc/passwd2 /etc/passwd && \ 
-mv SYS/motd/motd /etc/motd2 && rm -r /etc/motd && mv /etc/motd2 /etc/motd && \
+mv profile /etc/profile 
+mv passwd /etc/passwd
+mv motd/motd /etc/motd 
 clear && \
 
 # Making Make-Exec Executable 
@@ -27,16 +30,6 @@ apk upgrade -y && \
 clear && \
 
 # Remove Uneccessary Packages From APK
-apk autoremove && \
-clear && \
-
-# Cloning iSH-Auto-Config Git Repository
-git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git && \
-cd iSH-Auto-Config && \
-
-# Updating, Upgrading, & Removing Unnecessary Files
-apk update && \
-apk upgrade -y && \
 apk autoremove && \
 clear && \
 
