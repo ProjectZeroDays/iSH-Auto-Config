@@ -14,14 +14,15 @@
 ### Working on this currently, it's not ready for deployment
 ### Feel free to contribute...
 
-This is an automated configuration script that I created to (re)establish a fully updated, upgraded, and pre-configured pentesting and development environment in iSH when things go wrong and your files disappear or you happen to break something internally beyond repair. I got a little tired of continually setting everything back up again. 
+This is an automated configuration script that I created to (re)establish a fully updated, upgraded, and pre-configured development environment within iSH when things go wrong and your files disappear or you happen to break something internally beyond repair. I got a little tired of continually setting everything back up again. 
+
+Some of the tools that will be added later are both native to alpine and Python and used for Pentesting. This toolset will be limited in function due to the nature of iSH and would not be well suited for pentesters in any work enviornment. They will be to explore iSH further and fully test and its functionality so we may offer more feedback the development team. This is not a hacking tool of any kind and does not offer any serious functionality or compatibility to these types of tools in areas many netsec professionals would need in their daily arsenal. However, few tools do work such as brute force programs etc. and even still due to the QEMU Arch and limitations of the hardware and software they are very limited and not practical. These tools are merely to explore the full reach and capability for the iSH Develpment Team.
 
 ### NOTE: 
 You can now backup your file system using the settings menu as descibed in the wiki: 
 
 https://github.com/ish-app/ish/wiki
 
-It is important to acknowledge that we (participants of this team) nor “I”, (it’s creator) support, approve, condone, or participate in unauthorized exploitation of any property without proper authority to do so. These tools are designed for network security professionals to be used in accordance to the law and are not responsible for any  unlawful actions or unintended use that is beyond the intended use of the software or prohibited within the legal boundaries of the licensing agreement.
 
 ### iOS Shortcut Users: 
 I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
