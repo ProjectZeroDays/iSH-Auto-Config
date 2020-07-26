@@ -1,0 +1,467 @@
+#!/bin/bash
+
+# SYS Files to /etc 
+mv SYS/profile /etc/profile2 && rm -r /etc/profile && mv /etc/profile2 /etc/profile && \ 
+mv SYS/passwd /etc/passwd2 && rm -r /etc/passwd && mv /etc/passwd2 /etc/passwd && \ 
+mv SYS/motd/motd /etc/motd2 && rm -r /etc/motd && mv /etc/motd2 /etc/motd && \
+clear && \
+
+# Making Make-Exec Executable 
+chmod +x SYS/Make-Exec && \
+sh SYS/Make-Exec && \ 
+
+# Additinal Repositories Beyond The 'Main' & 'Community'
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \ 
+echo "http://nl.alpinelinux.org/alpine/v3.11/community/" >> /etc/apk/repositories && \
+echo "http://nl.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories && \
+
+# Updating iSH
+apk update && \
+clear && \
+
+# Upgrading iSH
+apk upgrade -y && \
+clear && \
+
+# Remove Uneccessary Packages From APK
+apk autoremove && \
+clear && \
+
+# Cloning iSH-Auto-Config Git Repository
+git clone https://github.com/ProjectZeroDays/iSH-Auto-Config.git && \
+cd iSH-Auto-Config && \
+
+# Updating, Upgrading, & Removing Unnecessary Files
+apk update && \
+apk upgrade -y && \
+apk autoremove && \
+clear && \
+
+# Installing Pip/Pipx/PipEnv
+python3 '-m pip install -U pip pipx --upgrade pip pipx setuptools wheel' &                                                                                       
+pipx ensurepath && \
+pipx completions && \
+git clone https://github.com/pypa/pipenv.git && \
+cd pipenv && \
+python3 setup.py install && \
+clear && \
+
+# Add & Configure VNC 
+# x11VNC, xTerm, & Xvfb
+apk add x11vnc && \
+clear && \ 
+apk add xvfb xvfb-run && \
+clear && \
+apk add xterm && \
+clear && \
+
+# Starts Background Daemon In The Background Allowing For Persistent Connections Even When iSH.app is Not Open
+ln -s /dev $(dirname $0)/dev && \
+
+# Select "While Using App" and "Always" 
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
+
+# Starts x11 VNC Server 
+x11vnc -create -noshm -forever && \
+
+# To Set A Password to Connect
+# x11vnc -rfbauth ~/.vnc/passwd
+# Use Your Own VNC Passwd File 
+# x11vnc -rfbauth /PATH/file
+# Disable Password Usage -nopw 
+# To Use x11VNC SSL Tunneling 
+# '-ssl -stunnel'
+# Docs for x11VNC-SSH Tunneling: 
+# http://www.karlrunge.com/x11vnc/#tunnelling   
+
+# Setting a Password to Connect & Run VNC in the Background
+x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" & 
+
+# Instructions on How To Access and Use VNC After Installing
+echo "Open VNC Viewer With: && \
+echo "127.0.0.1:5900 or localhost:0.\n" && \
+echo "vnc://127.0.0.1:5900\n" && \
+touch startvnc.md && \
+echo "vnc://127.0.0.1:5900, vnc://127.0.0.1:5901, vnc://127.0.0.1:5902">>startvnc.md && \
+echo "It can be be any port in range depending on your setup...">>startvnc.md && \
+echo "Try: vnc://localhost:0 where 0, 1, 2, or 3 represent the display number">>startvnc.md && \
+mv startvnc.md Docs && \
+clear && \
+
+# Setup SSH
+apk add openssh openssh-client && \
+ssh-keygen -A && \
+passwd && \
+clear && \
+
+# Swap sshd_config in SYS With /etc/.ssh/sshd_config
+rm -r /etc/.ssh/sshd_config && \
+mv SYS/sshd_config /etc/.ssh/ && \
+
+# Updating APK
+apk update && \
+clear && \
+
+# Upgrading APK
+apk upgrade && \
+clear && \
+
+# Adding Apks
+apk add &&
+    alpine-baselayout \
+    alpine-keys \
+    apk-tools \
+    apr \
+    apr-util \
+    argon2-libs \
+    atools \
+    archivemount \
+    binutils \
+    bison \
+    build-base \
+    c-ares \
+    ca-certificates \
+    ca-certificates-cacert \
+    clang \
+    cython \
+    daq-sfbpf \
+    db \
+    docker \
+    fish --allow-untrusted && 
+clear && \
+
+# Adding More APKs
+apk add && 
+    libdnet \
+    libedit \
+    libffi \
+    libffi-dev\
+    libgcc \
+    libgcrypt \
+    libgmpxx \
+    libgomp \
+    libgpg-error \
+    libhistory \
+    libintl \
+    libldap \
+    libmagic \
+    libmnl \
+    libmount \
+    libpcap \
+    libpcap-dev \
+    libpq \
+    libressl-dev \
+    libressl2.7-libcrypto \
+    libressl2.7-libssl \
+    libressl2.7-libtls \
+    libsasl \
+    libssh2 \
+    libssl1.1 \
+    libstdc++ --allow-untrusted && 
+clear && \
+
+# Adding More APKs 
+apk add && 
+    libtasn1 \
+    libtls-standalone \
+    libunistring \
+    libuuid \
+    libuv \
+    libxml2 \
+    libxml2-dev \
+    libxslt \
+    libxslt-dev \
+    linux-headers \
+    llvm \
+    lshw \
+    lua
+    lz4-libs \
+    m4 \
+    macchanger \
+    make \
+    man \
+    mdocml \
+    mpc1 \
+    mpfr3 \
+    musl \
+    musl-dev \
+    musl-utils \
+    nano \
+    ncurses \
+    ncurses-dev \
+    ncurses-libs \
+    ncurses-terminfo --allow-untrusted && 
+Clear && \
+
+# Adding APKs
+apk add && 
+    openssl \
+    openssl-dev \
+    p11-kit \
+    pciutils \
+    pciutils-libs \
+    pcre \
+    pcre2 \
+    perl \
+    perl-error \
+    perl-git \
+    php7 \
+    php7-common \
+    pkgconf \
+    postgresql \
+    postgresql-client \
+    postgresql-dev \
+    postgresql-libs \
+    proftpd \
+    py-pip \
+    python2 --allow-untrusted && 
+clear && \
+
+# Adding More APKs
+apk add &&
+    python3-dev \
+    readline \
+    readline-dev \
+    rlwrap \
+    ruby \
+    ruby-bigdecimal \
+    ruby-bundler \
+    ruby-dev \
+    ruby-etc \
+    ruby-io-console \
+    ruby-libs \
+    scanelf \
+    serf \
+    sqlite \
+    sqlite-dev \
+    sqlite-libs \
+    sshfs \
+    ssl_client \
+    subversion \
+    subversion-libs \
+    tree \
+    tzdata \
+    xz-libs \
+    yaml \
+    yaml-dev \
+    yersinia \
+    zlib \
+    zlib-dev 
+    zsh \
+    zsh-autocmppletion --allow-untrusted && 
+clear && \
+
+# Adding Py3-APKs
+apk add && 
+    py3-allfiles \
+    py3-ansi2html \
+    py3-ansicolor \
+    py3-ansicolors \
+    py3-apipkg \
+    py3-apparmor \
+    py3-appdirs \
+    py3-astral \
+    py3-bcrypt 
+    py3-bind \
+    py3-bottle \
+    py3-bottle-pgsql \
+    py3-bottle-request \
+    py3-bottle-rest \
+    py3-bottle-session \
+    py3-bottle-sqlalchemy \
+    py3-bottle-sqlite \
+    py3-bottle-websocket \
+    py3-cachy \
+    py3-catalogue \
+    py3-cheetah \
+    py3-cleo \
+    py3-cli_helpers \
+    py3-click-plugins \
+    py3-clikit \
+    py3-colorlog \
+    py3-configshell \
+    py3-cookies --allow-untrusted &&
+clear && \
+
+# Adding More Py3-APKs
+apk add && \
+    py3-core-api \
+    py3-coverage \
+    py3-coveralls \
+    py3-cparser \
+    py3-createrepo_c \
+    py3-crypto \
+    py3-cryptography \
+    py3-curl \
+    py3-d2to1 \
+    py3-daemonize \
+    py3-dbus \
+    py3-defcon \
+    py3-dnslib \
+    py3-dnspython \
+    py3-docutils \
+    py3-dpath \
+    py3-dweepy \
+    py3-elasticsearch \
+    py3-ethtool \
+    py3-ethtool-doc \
+    py3-factory-boy \
+    py3-forbiddenfruit --allow-untrusted &&
+clear && \
+
+# Adding More Py3-APKs
+apk add && \
+    py3-gevent-websocket \
+    py3-gitdb2 \
+    py3-gitlab \
+    py3-gitpython \
+    py3-glob2 \
+    py3-gnupg \
+    py3-gobject3 \
+    py3-google-api-python-client \
+    py3-google-auth \
+    py3-google-auth-httplib2 \
+    py3-helper \
+    py3-html5lib 
+    py3-httpbin \
+    py3-httplib2 \
+    py3-httpretty \
+    py3-hyperlink \
+    py3-idna-ssl \
+    py3-impacket \
+    py3-incoming \
+    py3-inflection \
+    py3-iso8601 \
+    py3-jellyfish \
+    py3-jwcrypto \
+    py3-keepass \
+    py3-lazy-object-proxy \
+    py3-ldap3 \
+    py3-libacl --allow-untrusted &&
+clear && \
+    
+# Adding More Py3-APKs 
+add &&
+    py3-libevdev \
+    py3-libtorrent-rasterbar \
+    py3-libuser \
+    py3-libvirt \
+    py3-logbook \
+    py3-magic \
+    py3-matplotlib \
+    py3-mccabe \
+    py3-mitmproxy \
+    py3-more-itertools \
+    py3-mutagen \
+    py3-mysqlclient \
+    py3-opencl \
+    py3-opencolorio \
+    py3-opengl-accelerate \
+    py3-openssl \
+    py3-packaging \
+    py3-pandas \
+    py3-pass-git-helper \
+    py3-path \
+    py3-pathlib2 
+    py3-pika \
+    py3-pikepdf \
+    py3-pkgconfig \
+    py3-pkginfo \
+    py3-port-for \
+    py3-prettytable \
+    py3-psutil \
+    py3-psutil-gns \
+    py3-py \
+    py3-pybind11-dev \
+    py3-pycolorterm \
+    py3-pydbus \
+    py3-pyftpdlib \
+    py3-pylint \
+    py3-pymysql --allow-untrusted &&
+clear && \
+    
+# Adding More Py3-APKs
+apk add &&
+    py3-pyrsistent \
+    py3-pysendfile \
+    py3-pysimplesoap \
+    py3-pysocks \
+    py3-pytools \
+    py3-pyutilib \
+    py3-pyzfs \
+    py3-qrcode \
+    py3-qrcode-doc \
+    py3-qt5 \
+    py3-rarfile \
+    py3-raven \
+    py3-rdflib \
+    py3-rencode \
+    py3-requests \
+    py3-requests-file \
+    py3-requests-toolbelt \
+    py3-responses \
+    py3-roman \
+    py3-rpm \
+    py3-rsa \
+    py3-rst \
+clear && \
+
+# Adding More Py3-APKs   
+apk add &&
+    py3-s3transfer \
+    py3-samba \
+    py3-scipy \
+    py3-scrapy \
+    py3-secretstorage \
+    py3-serial-doc \
+    py3-setuptools \
+    py3-setuptools-git \
+    py3-setuptools-lint \
+    py3-shellingham \
+    py3-sip \
+    py3-sip-doc \
+    py3-sip-pyqt5 \
+    py3-smbus \
+    py3-soupsieve \
+    py3-sqlalchemy \
+    py3-sqlalchemy-migrate \
+    py3-sqlalchemy-utils \
+    py3-sqlparse \
+    py3-sshuttle \
+    py3-sstash \
+    py3-tappy \
+    py3-termcolor \
+    py3-terminaltables \
+    py3-text-unidecode \
+    py3-tinydb \
+    py3-tls_parser \
+clear && \
+
+# Adding More Py3-APKs
+apk add &&
+    py3-tornado \
+    py3-tornado5 \
+    py3-twisted \
+    py3-u-msgpack \
+    py3-unicodecs \
+    py3-unpaddedbase64 \
+    py3-update-checker \
+    py3-uptime \
+    py3-virtualenv \
+    py3-ws4py \
+    py3-xxhash \
+    py3-yaml \
+    py3-yapsy \
+    py3-zipstream \
+    py3-zope-proxy \
+    samba-libs-py3
+clear && \
+
+
+
+
+
+ 
