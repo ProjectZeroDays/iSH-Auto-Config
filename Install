@@ -55,8 +55,7 @@ git clone https://github.com/projectzerodays/iSH-Auto-Config.git
 
 # Cloning iSH Wiki 
 git clone https://github.com/ish-app/ish/wiki.git 
-mv wiki Wiki && \
-mv Wiki\ iSH-Auto-Config\ && \
+mv wiki iSH-Auto-Config\Wiki && \
 
 # Changing Directories
 cd iSH-Auto-Config
