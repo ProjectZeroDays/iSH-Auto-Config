@@ -60,6 +60,9 @@ mv Wiki\ iSH-Auto-Config\ && \
 
 # Changing Directories
 cd iSH-Auto-Config
+
+# Making Config Executable
+chmod x+ Config 
 clear && \
 
 # Starting Configuration Script
