@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+
+# Installs additional tools using Pip
+Python3 -m pip install brew && \
+Python3 -m pip install scapy && \
+Python3 -m pip install scikit-fuzzy && \
+Python3 -m pip install dnspython3 && \
+Python3 -m pip install commix && \
+Python3 -m pip install ethtools && \
+python3 -m pip install numpy && \
+python3 -m pip install --upgrade pip && \ 
+clear && \
+
+# Changing Directory to PENTESTING
+cd ../TOOLS/PENTESTING
+
+# Running INSTALL Script 
+sh INSTALL

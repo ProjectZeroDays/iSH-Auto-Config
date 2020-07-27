@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+
+printf "Making Config Scripts Executable \n" && \
+
+# Making CONFIG Scripts Executable
+chmod +x SOURCES && \
+chmod +x ALIASES && \
+
+# Changing to /CONFIG/APK
+cd APK && \
+
+# Making APK Scripts Executable
+chmod +x APK1 && \
+chmod +x APK2 && \
+chmod +x APK3 && \
+chmod +x APK4 && \
+chmod +x APK5 && \
+chmod +x APK6 && \
+chmod +x PY3-APK && \ 
+chmod +x OTHER && \
+
+# Changing Directory to /CONFIG/PIP
+cd ../PIP
+
+# Making PIP Scripts Executable
+chmod +x PIP-PIPX-PIPENV && \
+chmod +x PIPS && \
+
+# Changing Directory to PENTESTING
+cd ../TOOLS/PENTESTING
+
+# Making PENTESTING Scripts Executable
+chmod +x INSTALL
+
+# Changing Directory to KALI
+cd ../KALI
+
+# Making KALI Scripts Executable
+chmod +x INSTALL
+chmod +x bind-apk
+chmod +x patch_file/kapktool
+chmod +x patch_file/ksignapk
+chmod +x patch_file/apk.rb.patch
+chmod +x apk.rb
+
+# Changing Directory to 'u-setup'
+chmod +x setup
+chmod +x signapk
+
+# Changing Directory to CONFIG
+cd ../../../../
+clear && \
+
+sh SOURCES

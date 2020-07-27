@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+
+#Installs Requirements to use as Standalone
+apk add python3 && \
+
+# Installs Pip, Pipx, and Setup For PipEnv 
+python3 -m pip install -U pip pipx --upgrade pip pipx setuptools wheel && \
+pipx ensurepath && \
+pipx completions && \
+git clone https://github.com/pypa/pipenv.git && \
+cd pipenv && \
+python3 setup.py install && \
+clear && \
+
+# Changing Directory to PIP
+cd ../iSH-Auto-Config/CONFIG/PIP
+ 
+# Running PIPS Script
+sh PIPS

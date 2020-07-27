@@ -1,0 +1,43 @@
+#!/bin/bash 
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+
+# Adds More APKs
+apk add && 
+    libtasn1 \
+    libtls-standalone \
+    libunistring \
+    libuuid \
+    libuv \
+    libxml2 \
+    libxml2-dev \
+    libxslt \
+    libxslt-dev \
+    linux-headers \
+    llvm \
+    lshw \
+    lua
+    lz4-libs \
+    m4 \
+    macchanger \
+    make \
+    man \
+    mdocml \
+    mpc1 \
+    mpfr3 \
+    musl \
+    musl-dev \
+    musl-utils \
+    nano \
+    ncurses \
+    ncurses-dev \
+    ncurses-libs \
+    ncurses-terminfo --allow-untrusted && 
+
+# Running APK5 Script
+sh APK5

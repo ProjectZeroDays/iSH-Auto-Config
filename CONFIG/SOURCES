@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+#
+printf "Adding to Sources in /etc/apk/repositories \n" && \
+#
+fi
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/v3.11/main/" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/v3.11/community/" >> /etc/apk/repositories && \ 
+echo "http://nl.alpinelinux.org/alpine/v3.11/community/" >> /etc/apk/repositories && \
+echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" /etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/"/etc/apk/repositories && \
+echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" /etc/apk/repositories && \
+clear && \
+
+sh ALIASES

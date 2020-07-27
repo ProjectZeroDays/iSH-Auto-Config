@@ -1,0 +1,1 @@
+iSH does not automatically send any data to anyone.

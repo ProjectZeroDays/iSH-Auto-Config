@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Creator: Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+
+printf "Downloading and Installing Apks... \n" && \
+
+# Adding APKs
+apt update && \
+apk upgrade && \
+apk add &&
+    alpine-baselayout \
+    alpine-keys \
+    apk-tools \
+    apr \
+    apr-util \
+    argon2-libs \
+    atools \
+    archivemount \
+    autoconf \
+    bash \
+    binutils \
+    bison \
+    build-base \
+    c-ares \
+    ca-certificates \
+    ca-certificates-cacert \
+    clang \
+    cmake \
+    curl \
+    cython \
+    daq-sfbpf \
+    db --allow-untrusted && 
+clear && \
+
+# Running APK2 Script
+sh APK2
+

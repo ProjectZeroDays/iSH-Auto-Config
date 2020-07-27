@@ -55,16 +55,7 @@ clear && \
 git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
 
 # Changing Directory to iSH-Auto-config
-cd && \
-
-# Cloning iSH Wiki
-git clone https://github.com/ish-app/ish/wiki.git && \
-
-# Renaming wiki
-mv wiki\ iSH-Wiki && \
-
-# Changing Directories
-cd iSH-Auto-Config && \ 
+cd iSH-Auto-Config/CONFIG && \
 
 # Run Config Script
-sh Config
+sh SETUP

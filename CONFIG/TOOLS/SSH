@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# Author:  Project Zero Days
+# Email:   info@ProjectZeroDays.com
+# Github:  Github.com/ProjectZeroDays
+# Twitter: Twitter.com/ProjectZeroDays
+# Web:     https://ProjectZeroDays.com
+# Secure:  https://ProjectZeroDays@pm.me
+
+echo "Configuring SSH for your system..." && \
+
+# Adding VNC Dependencies
+apk add openssh openssh-client && \
+
+# Generating SSH Key
+ssh-keygen -A && \
+
+# Generating SSH Password
+passwd && \
+
+# Copying 'sshd_config' File Over
+echo "This copies the updated configuration" && \
+cp -L -f ../SYS/sshd_config /etc/ssh/sshd_config && \
+echo Complete! && \
+clear && \
+
+# Opening VNC Setup Script
+sh VNC
+
