@@ -1,11 +1,22 @@
-#!bin/bash
-# 
-# Installs Cheat Cheat (cht.sh)
+#!/bin/ash
+
+# License: GNU public
+# Creator: Project Zero Days
+# Github:  https://Github.com/ProjectZeroDays
+# Website: https://ProjectZeroDays.com
+# Email:   Info@ProjectZeroDays.com
+# Secure:  ProjectZeroDays@pm.me
+# Twitter: @ProjectZeroDays
+# Reddit:  @ProjectZeroDays
+# DEV:     @ProjectZeroDays 
+
+# Add a Cheat Cheat (cht.sh)
 curl https://cht.sh/:cht.sh | tee /usr/local/bin/cht.sh && \
 chmod +x /usr/local/bin/cht.sh && \
 cht.sh --mode auto && \
 clear && \ 
-#\
+
+# Adding Other APKs
 apk add && 
     apk-autoupdate \
     apk-autoupdate-doc \
@@ -29,4 +40,10 @@ apk add &&
     zfs-auto-snapshot \
     zfs-auto-snapshot-doc && \
 clear && \
-bash
+
+# Changing Directory to PIP
+cd ../PIP && \
+
+# Running PIP-PIPX-PIPENV Script
+sh PIP-PIPX-PIPENV
+

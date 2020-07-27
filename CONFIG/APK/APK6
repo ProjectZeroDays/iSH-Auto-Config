@@ -45,8 +45,5 @@ apk add &&
     zlib-dev --allow-untrusted && 
 clear && \
 
-# Changing Directory to PIP
-cd ../PIP && \
-
-# Running PIP-PIPX-PIPENV Script
-sh PIP-PIPX-PIPENV
+# Running OTHER Script
+sh OTHER
