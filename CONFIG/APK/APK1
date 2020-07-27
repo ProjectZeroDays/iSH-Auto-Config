@@ -19,7 +19,7 @@ apk add &&
     apr \
     apr-util \
     argon2-libs \
-    atools \
+    atools \  
     archivemount \
     autoconf \
     bash \

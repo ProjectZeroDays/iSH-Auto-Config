@@ -28,10 +28,9 @@
 # Add Config File For Neofetch 
 # add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setu
 # Install Pips
-# Install Ruby Programs
+# Install Ruby Gems creat install file
 # Install Python Programs
 # Install Bkpg Programs
-# Add Build-Essentials
 # Renanme and Relate Py3 Folder to .Py3
 
 # Adding Necessary APKs to Run Script
@@ -55,7 +54,7 @@ clear && \
 git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
 
 # Changing Directory to iSH-Auto-config
-cd iSH-Auto-Config/CONFIG && \
+cd iSH-Auto-Config && \
 
 # Making SETUP Script Executable
 chmod +x SETUP && \

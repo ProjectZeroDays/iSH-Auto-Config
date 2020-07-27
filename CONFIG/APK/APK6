@@ -14,7 +14,7 @@ apk add &&
     readline \
     readline-dev \
     rlwrap \
-    ruby \
+    ruby \ 
     ruby-bigdecimal \
     ruby-bundler \
     ruby-dev \
