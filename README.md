@@ -19,20 +19,12 @@ Some of the tools that will be added later are both native to alpine and Python 
 
 ### NOTE: 
 You can now backup your file system using the settings menu as descibed in the wiki: 
-https://github.com/ish-app/ish/wiki
-
-### iOS Shortcut Users: 
-I am still working on the X-Callback-Url and the settings, for now this will open the app and using opener and other apps you can pass cmd to the terminal.
-
-### Shortcut to Install TestFlight, Accept Beta Access, and Install iSH:
-https://www.icloud.com/shortcuts/cdde893504c1495ba9b3ebcbccc485d6
+https://github.com/ish-app/ish/wiki/
 
 ### Shortcut to Open iSH using shortcuts:
+https://www.icloud.com/shortcuts/e7ba2a42853949d0af0b6b843580d815
 
-https://www.icloud.com/shortcuts/b0818b5bf34448f48ef8b1aa995f6217
-
-For those of you using the iOS Shortcut I built, the plan is to eventually finish the shortcut so the repo will be cloned into iSH using working copy and X-Callback-Url with a menu to ask which settings you want and which apps to install etc. I'm just really lazy lol.
-
+This shortcut will download Tesflight and iSH, clone the github repo, and run the INSTALL script automatically over SSH. Cheers!
 Now let’s get cracking...
 
 #### Testflight
