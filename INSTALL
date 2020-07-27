@@ -61,4 +61,4 @@ cd iSH-Auto-Config/CONFIG && \
 chmod +x SETUP && \
 
 # Run Config Script
-sh SETUP
+sh /CONFIG/SETUP
