@@ -54,10 +54,10 @@ clear && \
 git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
 
 # Changing Directory to iSH-Auto-config
-cd iSH-Auto-Config && \
+cd iSH-Auto-Config/CONFIG && \
 
 # Making SETUP Script Executable
 chmod +x SETUP && \
 
 # Run Config Script
-sh /CONFIG/SETUP
+sh SETUP
