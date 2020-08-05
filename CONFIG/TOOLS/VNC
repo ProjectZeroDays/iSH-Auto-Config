@@ -7,9 +7,6 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 
-printf "Updating, Upgrading, Removing Old APKs, & Cleaning Cache\n" && \
-fi
-
 # Updating iSH
 apk update && \
 clear && \
@@ -18,18 +15,11 @@ clear && \
 apk upgrade && \
 clear && \
 
-#Removing  Unneccesary APKs
-apk autremove && apk cache && \
-clear && \
-
 # Installs necessary files when installed by itself
 apk add wget curl bash && \
 clear && \
 
 #!/bin/bash
-#
-printf "Entering into Bash Env. Adding VNC & its' dependencies...\n" && \
-fi
 #
 # Installs x11VNC, xTerm, and Xvfb
 apk add x11vnc && \
@@ -66,16 +56,14 @@ x11vnc -create -noshm -forever && \
 #
 x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
 #
-printf "To Open VNC Viewer on iOS, open VNC Viewer and Use:" && \
-printf "127.0.0.1:5900, 0.0.0.0:5900, localhost:0" && \
-printf "To view within shortcuts or within a browser," && \
-printf "Open safari, add 'VNC://' as a prefix:" && \
-printf "VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost" && \
-fi
-clear && \
+# "To Open VNC Viewer on iOS, open VNC Viewer and Use:" 
+# "127.0.0.1:5900, 0.0.0.0:5900, localhost:0" 
+# "To view within shortcuts or within a browser," 
+# "Open safari, add 'VNC://' as a prefix:" 
+# "VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0" 
 
-# Changing Directory to APK
-cd ../APK && \
+sh ../APK/APK1
 
-# Running APK Installation Scripts
-sh APK1
+
+
+

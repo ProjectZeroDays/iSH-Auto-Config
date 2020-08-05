@@ -56,8 +56,11 @@ git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
 # Changing Directory to iSH-Auto-config
 cd iSH-Auto-Config/CONFIG && \
 
-# Making SETUP Script Executable
-chmod +x SETUP && \
+# Changing Directory to CONFIG
+cd CONFIG && \
+
+# Making SETUP Script Executable in CONFIG/
+chmod +x SETUP
 
 # Run Config Script
 sh SETUP

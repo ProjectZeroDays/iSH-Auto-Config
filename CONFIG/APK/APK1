@@ -7,11 +7,10 @@
 # Web:     https://ProjectZeroDays.com
 # Secure:  https://ProjectZeroDays@pm.me
 
-printf "Downloading and Installing Apks... \n" && \
+cd ../ && cd APK && \
 
 # Adding APKs
-apt update && \
-apk upgrade && \
+apk update && apk upgrade && \
 apk add &&
     alpine-baselayout \
     alpine-keys \
@@ -19,8 +18,7 @@ apk add &&
     apr \
     apr-util \
     argon2-libs \
-    atools \  
-    archivemount \
+    atools \
     autoconf \
     bash \
     binutils \
@@ -34,9 +32,10 @@ apk add &&
     curl \
     cython \
     daq-sfbpf \
-    db --allow-untrusted && 
+    db --allow-untrusted && \
 clear && \
 
 # Running APK2 Script
 sh APK2
+
 
