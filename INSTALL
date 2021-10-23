@@ -1,4 +1,5 @@
 #!/bin/ash
+
 echo
 # License: GNU public
 # Creator: Project Zero Days
@@ -11,22 +12,31 @@ echo
 # DEV:     @ProjectZeroDays 
 echo
 echo
+
 # This auto configures Alpine for iSH testers by installing package managers, 
 # develpment tools, & configurations to their iSH (re)installation.
 echo
+
 # This install python3, Pip, Pipx, Bpkg, Pacman, PipEnv, 
 # SSH, VNC, Ruby, and much more!
 echo
+echo
+echo
+echo
+
 # Adding Location Daemon in the Background to maintain active shell 
 ## Allows Persistent Connections even When iSH is not open
 ln -s /dev $(dirname $0)/dev
 echo
+
 printf "Select 'Always allow'."
 cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
 echo
+
 # Updating iSH
 apk update
 echo
+
 # Adding Dependencies
 apk add &&
     bash \
@@ -50,6 +60,8 @@ apk add &&
     nano \
     gzip \
     db --allow-untrusted && \
+echo 
+echo
 
 # Cloning Musl Cross Make
 git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz
@@ -61,14 +73,17 @@ tar -xf v0.9.9.tar.gz
 cd v0.9.9
 
 # Compiling and Installing Musl-Cross-Make
-make TARGET=i686-linux-musl OUTPUT=[whatever] -j4 install
 make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 install
+
+# Remove MCM Files
+cd
+rm -r v0.9.9
 
 # Making Directory for lib64
 mkdir /lib64 
 
 # Linking x86 musl lib 
-lib/ld-musl-i386.so.1 ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
+ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
 
 # Creating a soft link for ncurses
 ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
@@ -77,6 +92,8 @@ ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
 wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES
 mv ALIASES  /etc/profile.d/ALIASES.sh
 chmod +X ALIASES.sh
+
+
 
 # Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH.
 mkdir /mnt/mounted
