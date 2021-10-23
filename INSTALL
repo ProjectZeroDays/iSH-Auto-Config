@@ -1,5 +1,5 @@
 #!/bin/ash
-
+echo
 # License: GNU public
 # Creator: Project Zero Days
 # Github:  https://Github.com/ProjectZeroDays
@@ -9,18 +9,24 @@
 # Twitter: @ProjectZeroDays
 # Reddit:  @ProjectZeroDays
 # DEV:     @ProjectZeroDays 
-
-# This script allows iSH testers to install iSH choosing package managers, 
-# develpment tools, pentesting tools, & configurations to their iSH 
-# (re)installation & configuration. You choose whether to auto configure & 
-# install python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, etc., 
-# or to add our custom configurations such as our aliases added to the sys
-# & to /etc/profile, the ability to run daemons to allow iSH to take 
-# SSH/VNC connections even when the app is not running. You Choose! 
-
+echo
+echo
+# This auto configures Alpine for iSH testers by installing package managers, 
+# develpment tools, & configurations to their iSH (re)installation.
+echo
+# This install python3, Pip, Pipx, Bpkg, Pacman, PipEnv, 
+# SSH, VNC, Ruby, and much more!
+echo
+# Adding Location Daemon in the Background to maintain active shell 
+## Allows Persistent Connections even When iSH is not open
+ln -s /dev $(dirname $0)/dev
+echo
+printf "Select 'Always allow'."
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
+echo
 # Updating iSH
 apk update
-
+echo
 # Adding Dependencies
 apk add &&
     bash \
@@ -45,12 +51,18 @@ apk add &&
     gzip \
     db --allow-untrusted && \
 
-Cloning Musl Cross Make
+# Cloning Musl Cross Make
 git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz
+
+# Unpacking Musl Cross Make
 tar -xf v0.9.9.tar.gz
+
+# Changing into Musl Cross Make 
 cd v0.9.9
 
-
+# Compiling and Installing Musl-Cross-Make
+make TARGET=i686-linux-musl OUTPUT=[whatever] -j4 install
+make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 install
 
 # Making Directory for lib64
 mkdir /lib64 
@@ -62,58 +74,21 @@ lib/ld-musl-i386.so.1 ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
 ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
 
 # Adding Aliases to /etc/profile.d folder to run at startup
-
-chmod +X aliases.sh
-mv aliases.sh /etc/profile.d/aliases.sh
+wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES
+mv ALIASES  /etc/profile.d/ALIASES.sh
+chmod +X ALIASES.sh
 
 # Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH.
 mkdir /mnt/mounted
-
-# Adding Location Daemon in the Background to maintain active shell 
-cat /dev/location > /dev/null
-
-echo "Make sure you Select allow when the notification pops up"
-
-# add easyinstall after pip
-
-# confirm virtenv and add after pip
-
-# printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
-
-# add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setup
-
-# Install Ruby Gems
-
-# Install Python
-
-# Install Pip
 
 # Install Bkpg
 curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
 bpkg install cha87de/bashutil -g
 
-# Cloning Repo
-git clone https://github.com/projectzerodays/iSH-Auto-Config.git 
-
-# Hiding Folder
-mv iSH-Auto-Config .iSH-Auto-Config
-
-# Changing Directory to iSH-Auto-config
-cd .iSH-Auto-Config/CONFIG && \
-
-# Changing Directory to CONFIG
-cd .CONFIG && \
-
-# Making SETUP Script Executable in CONFIG/
-chmod +x SETUP
-
-# Run Config Script
-sh 
-
-# Configuring VNC Server...
+# Configuring SSH...
 echo "Configuring SSH for your system..." && \
 
-# Adding VNC Dependencies
+# Adding SSH Dependencies
 apk add openssh openssh-client && \
 
 # Generating SSH Key
@@ -122,20 +97,49 @@ ssh-keygen -A && \
 # Generating SSH Password
 passwd && \
 
-#Copying 'sshd_config' File Over
-#echo "This copies the updated configuration" && \
-#cp -L -f ../SYS/sshd_config /etc/ssh/sshd_config && \
-#echo Complete! && \
-#clear && \
+# VNC Setup Script
+## Installs x11VNC, xTerm, and Xvfb
+apk add x11vnc && \
+clear && \
+apk add xvfb xvfb-run && \
+clear && \
+apk add xterm && \
+clear && \
 
-# Opening VNC Setup Script
-sh VNC
+# Set A Password to Connect:
+# x11vnc -rfbauth ~/.vnc/passwd
+# Use Your Own VNC Passwd File 
+# x11vnc -rfbauth /PATH/file
+# Disable Password Usage -nopw 
+
+# To Use x11VNC SSL Tunneling 
+# '-ssl -stunnel'
+# Documentation for x11VNC-SSH Tunneling: 
+# http://www.karlrunge.com/x11vnc/#tunnelling   
+
+# Running x11VNC with no passwd using SSL/Tunneling
+x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
+
+# To Open VNC Viewer on iOS, open VNC Viewer
+# and use the the following examples.
+
+# Start without SSL use the follwoing:
+# 127.0.0.1:5900, 0.0.0.0:5900, localhost:0, ::0
+ 
+# Start With SSL use the following:
+# 127.0.0.1:5901,0.0.0.0:5901, localhost:1, ::1
+
+# To view within shortcuts or within a browser
+# Open Safari and add 'VNC://' as a prefix to the IP:Port
+# VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0
+# VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1
 
 # Cleaning Up...
 apk autoremove
 apk clean
 apk cache 
-rm -r .iSH-Auto-Config
+
+# Finished
 echo
 echo
 echo
