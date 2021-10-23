@@ -1,23 +1,24 @@
 #!/bin/ash
 echo
-# License: GNU public
-# Creator: Project Zero Days
-# Github:  https://Github.com/ProjectZeroDays
-# Website: https://ProjectZeroDays.com
-# Email:   Info@ProjectZeroDays.com
-# Secure:  ProjectZeroDays@pm.me
-# Twitter: @ProjectZeroDays
-# Reddit:  @ProjectZeroDays
-# DEV:     @ProjectZeroDays 
+echo "License: GNU public"
+echo "Creator: Project Zero Days"
+echo "Github:  https://Github.com/ProjectZeroDays"
+echo "Website: https://ProjectZeroDays.com"
+echo "Email:   Info@ProjectZeroDays.com"
+echo "Secure:  ProjectZeroDays@pm.me"
+echo "Twitter: @ProjectZeroDays"
+echo "Reddit:  @ProjectZeroDays"
+echo "DEV:     @ProjectZeroDays" 
 echo
-# This auto configures Alpine for iSH testers by installing package managers, 
-# develpment tools, & configurations to their iSH (re)installation.
+echo "This auto configures Alpine for iSH testers by installing package managers," 
+echo "develpment tools, & configurations to their iSH (re)installation."
 echo
-# This install python3, Pip, Pipx, Bpkg, Pacman, PipEnv, 
-# SSH, VNC, Ruby, and much more!
+echo "This install python3, Pip, Pipx, Bpkg, Pacman, PipEnv," 
+echo "SSH, VNC, Ruby, and much more!"
 echo
-# Adding Location Daemon in the Background to maintain active shell 
-## Allows Persistent Connections even When iSH is not open
+echo
+echo "Adding Location Daemon in the Background to maintain active shell"
+echo "Allows Persistent Connections even When iSH is not open"
 ln -s /dev $(dirname $0)/dev
 echo
 echo
@@ -25,11 +26,12 @@ printf "Select 'Always allow'."
 cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
 echo
 echo
-# Updating iSH
+echo "Updating iSH..."
 apk update
 echo
 echo
-# Adding Dependencies
+echo "Installing Dependencies..."
+echo
 apk add &&
     bash \
     curl \
@@ -54,74 +56,74 @@ apk add &&
     db --allow-untrusted && \
 echo 
 echo
-# Cloning Musl Cross Make
+echo "Cloning Musl Cross Make..."
 git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz
 echo
-# Unpacking Musl Cross Make
+echo "Unpacking Musl Cross Make..."
 tar -xf v0.9.9.tar.gz
 echo
-# Changing into Musl Cross Make 
+echo "Changing Directories..."
 cd v0.9.9
 echo
-# Compiling and Installing Musl-Cross-Make
+echo "Compiling and Installing Musl-Cross-Make..."
 make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 install
 echo
-# Remove MCM Files
+echo "Changing Directories..."
 cd
+echo
+echo "Removing MCM Git Directory..."
 rm -r v0.9.9
 echo
-echo
-# Making Directory for lib64
+echo "Making Directory for lib64..."
 mkdir /lib64 
 echo
-echo
-# Linking x86 musl lib 
+echo "Linking x86 musl lib..."
 ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
 echo
-echo
-# Creating a soft link for ncurses
+echo "Creating a soft link for ncurses..."
 ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
 echo
 echo
-# Adding Aliases to /etc/profile.d folder to run at startup
+echo "Adding Aliases to /etc/profile.d folder to run at startup..."
+echo
 wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES
+echo
 mv ALIASES  /etc/profile.d/ALIASES.sh
+echo
 chmod +X /etc/profile.d/ALIASES.sh
 echo
 echo
-# Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH.
+echo "Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH..."
 mkdir /mnt/mounted
 echo
 echo
-# Install Bkpg
+echo "Installing Bkpg.."
 curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
 bpkg install cha87de/bashutil -g
 echo
 echo
-# Configuring SSH...
 echo "Configuring SSH for your system..." && \
 echo
-# Adding SSH Dependencies
+echo "Adding SSH Dependencies..."
 apk add openssh openssh-client && \
 echo
-# Generating SSH Key
+echo "Generating SSH Key..."
 ssh-keygen -A && \
 echo
+#echo "Generating SSH Password..."
+#passwd && \
 echo
-# Generating SSH Password
-passwd && \
 echo
-echo
-# VNC Setup Script
-## Installs x11VNC, xTerm, and Xvfb
+echo "Setting up VNC..."
+echo "Installs x11VNC, xTerm, and Xvfb"
 apk add x11vnc && \
 echo
 apk add xvfb xvfb-run && \
 echo
 apk add xterm && \
 echo
+# To Set A Password to Connect to VNC Server:
 echo
-# Set A Password to Connect:
 # x11vnc -rfbauth ~/.vnc/passwd
 # Use Your Own VNC Passwd File 
 # x11vnc -rfbauth /PATH/file
@@ -129,35 +131,32 @@ echo
 echo
 # To Use x11VNC SSL Tunneling 
 # '-ssl -stunnel'
-# Documentation for x11VNC-SSH Tunneling: 
-# http://www.karlrunge.com/x11vnc/#tunnelling   
 echo
-# Running x11VNC with no passwd using SSL/Tunneling
-x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
+echo "Documentation for x11VNC-SSH Tunneling:" 
 echo
-# To Open VNC Viewer on iOS, open VNC Viewer
-# and use the the following examples.
+echo "http://www.karlrunge.com/x11vnc/#tunnelling"  
 echo
-# Start without SSL use the follwoing:
-# 127.0.0.1:5900, 0.0.0.0:5900, localhost:0, ::0
+echo "To Open VNC Viewer on iOS, open VNC Viewer"
+echo "and use the the following examples"
+echo
+echo "Start without SSL use the follwoing:"
+echo
+echo "127.0.0.1:5900, 0.0.0.0:5900, localhost:0, ::0"
 echo 
-# Start With SSL use the following:
-# 127.0.0.1:5901,0.0.0.0:5901, localhost:1, ::1
+echo "Start With SSL use the following:"
 echo
-# To view within shortcuts or within a browser
-# Open Safari and add 'VNC://' as a prefix to the IP:Port
-# VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0
-# VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1
+echo "127.0.0.1:5901,0.0.0.0:5901, localhost:1, ::1"
 echo
+echo "To view within shortcuts or within a browser"
 echo
-# Cleaning Up...
-apk cache 
+echo "Open Safari and add 'VNC://' as a prefix to the IP:Port"
 echo
+echo "VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0"
+echo "VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1"
 echo
-# Finished
+echo "Running x11VNC with no passwd using SSL/Tunneling..."
+x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
 echo
 echo
 echo "..and we are done!"
-echo 
-echo 
 echo "Enjoy!"
