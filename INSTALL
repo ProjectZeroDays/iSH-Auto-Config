@@ -10,73 +10,136 @@
 # Reddit:  @ProjectZeroDays
 # DEV:     @ProjectZeroDays 
 
-# This script allows iSH testers to install iSH choosing package managers, develpment tools, pentesting tools, & configurations to their iSH (re)installation & configuration. You choose whether to auto configure & install python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, etc., or to add our custom configurations such as our aliases added to the sys & to /etc/profile, the ability to run daemons to allow iSH to take SSH/VNC connections even when the app is not running. You Choose! 
+# This script allows iSH testers to install iSH choosing package managers, 
+# develpment tools, pentesting tools, & configurations to their iSH 
+# (re)installation & configuration. You choose whether to auto configure & 
+# install python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, etc., 
+# or to add our custom configurations such as our aliases added to the sys
+# & to /etc/profile, the ability to run daemons to allow iSH to take 
+# SSH/VNC connections even when the app is not running. You Choose! 
 
-# Need to add files for BKPG and  add package manager folder to repo
+# Updating iSH
+apk update
 
-# Use Pacman repo to add .sh for installing packages through pacman delete other files 
-
-# Add Aliases to profile
-
-# Add repositories file to SYS and add it to be swapped out
-
-# add daemon in the background code 
-
-# add easyinstall after pip
-
-# confirm virtenv and add after pip
-
-# bkpg to this and update printf when adding packages
-
-# printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
-
-# Add Config File For Neofetch 
-
-# add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setup
-
-# Install Pips
-
-# Install Ruby Gems creat install file
-
-# Install Python Programs
-
-# Install Bkpg Programs
-
-# Renanme and Relate Py3 Folder to .Py3
-
-# Adding Necessary APKs to Run Script
+# Adding Dependencies
 apk add &&
     bash \
+    curl \
     wget \
     fish \
     zsh \
     python3 \
     perl \
     automake \
-    neofetch \
     git \
     lua \
     cmake \
-    curl \
-    docker \
     archivemount \
     autoconf \
     clang \
     cython \
+    libvirt-client \
+    ncurses5-libs \
+    gettext \
+    nano \
+    gzip \
     db --allow-untrusted && \
-clear && \
+
+Cloning Musl Cross Make
+git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz
+tar -xf v0.9.9.tar.gz
+cd v0.9.9
+
+
+
+# Making Directory for lib64
+mkdir /lib64 
+
+# Linking x86 musl lib 
+lib/ld-musl-i386.so.1 ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
+
+# Creating a soft link for ncurses
+ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
+
+# Adding Aliases to /etc/profile.d folder to run at startup
+
+chmod +X aliases.sh
+mv aliases.sh /etc/profile.d/aliases.sh
+
+# Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH.
+mkdir /mnt/mounted
+
+# Adding Location Daemon in the Background to maintain active shell 
+cat /dev/location > /dev/null
+
+echo "Make sure you Select allow when the notification pops up"
+
+# add easyinstall after pip
+
+# confirm virtenv and add after pip
+
+# printf "/etc/passwd for -> iSH-Auto-Config/SYS/passwd\n'
+
+# add printf "/etc/.ssh/sshd_config for -> iSH-Auto-Config/SYS/sshd_config\n' after SSH setup
+
+# Install Ruby Gems
+
+# Install Python
+
+# Install Pip
+
+# Install Bkpg
+curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
+bpkg install cha87de/bashutil -g
 
 # Cloning Repo
-git clone https://github.com/projectzerodays/iSH-Auto-Config.git && \
+git clone https://github.com/projectzerodays/iSH-Auto-Config.git 
+
+# Hiding Folder
+mv iSH-Auto-Config .iSH-Auto-Config
 
 # Changing Directory to iSH-Auto-config
-cd iSH-Auto-Config/CONFIG && \
+cd .iSH-Auto-Config/CONFIG && \
 
 # Changing Directory to CONFIG
-cd CONFIG && \
+cd .CONFIG && \
 
 # Making SETUP Script Executable in CONFIG/
 chmod +x SETUP
 
 # Run Config Script
-sh SETUP
+sh 
+
+# Configuring VNC Server...
+echo "Configuring SSH for your system..." && \
+
+# Adding VNC Dependencies
+apk add openssh openssh-client && \
+
+# Generating SSH Key
+ssh-keygen -A && \
+
+# Generating SSH Password
+passwd && \
+
+#Copying 'sshd_config' File Over
+#echo "This copies the updated configuration" && \
+#cp -L -f ../SYS/sshd_config /etc/ssh/sshd_config && \
+#echo Complete! && \
+#clear && \
+
+# Opening VNC Setup Script
+sh VNC
+
+# Cleaning Up...
+apk autoremove
+apk clean
+apk cache 
+rm -r .iSH-Auto-Config
+echo
+echo
+echo
+echo "..and we are done!"
+echo 
+echo 
+Enjoy!
