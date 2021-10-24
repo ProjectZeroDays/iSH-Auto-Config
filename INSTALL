@@ -15,7 +15,8 @@
 # Installation and Configurations For OpenSSH, python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, and much more!
 # 
 # 
-echo -e "$OKBLUE[*]$RESET Priveledged Account to Install Packages...$RESET"
+echo -e "$OKBLUE[*]$RESET Priveledged 
+Account to Install Packages...$RESET"
 #
 adduser user -g sudo && \
 #
@@ -44,8 +45,8 @@ cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #! && \
 # 
 # Updating and Upgrading Alpine in iSH...
 # 
-apk sudo apt-get update && sudo apt-get -y upgrade && \
-# 
+apk add sudo
+apk update
 apk -y upgrade && \
 # 
 # 
@@ -94,6 +95,8 @@ apk add &&
     ncurses5-libs \
     gettext \
     nano \
+    sudo \
+    makedepend \
     gzip \
     db -y --allow-untrusted && \
 # 
