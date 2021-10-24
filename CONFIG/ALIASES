@@ -1,12 +1,4 @@
 #!/bin/bash
-#
-# Creator: I  Project Zero Days
-# Email:   info@ProjectZeroDays.com
-# Github:  Github.com/ProjectZeroDays
-# Twitter: Twitter.com/ProjectZeroDays
-# Web:     https://ProjectZeroDays.com
-# Secure:  https://ProjectZeroDays@pm.me
-
 alias VNC='vncserver start' && \
 alias SSH='ssh weare@192.168.1.3 -p 22' && \
 alias etc='cd /etc' && \
@@ -37,10 +29,3 @@ alias commit='git commit' && \
 alias pull='git pull' && \
 alias delete='rm -r' && \
 alias profile='git config --global user.email "projectzerodays@gmail.com" && git config --global user.name "projectzerodays"' && \
-clear && \
-
-# Changing Directory to TOOLS
-cd TOOLS && \
-
-# Running SSH Setup Script
-sh SSH
