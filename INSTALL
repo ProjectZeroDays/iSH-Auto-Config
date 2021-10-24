@@ -53,56 +53,54 @@ apk -y upgrade && \
 # Installing Dependencies...
 # 
 apk add &&
-    bash \
-    curl \
-    wget \
-    fish \
-    zsh \
-    python3 \
-    perl \
-    automake \
-    git \
-    lua \
-    cmake \
-    archivemount \
-    make \
-    autoconf \
-    clang \
-    cython \
-    cmake-bash-completion \
-    extra-cmake-modules \
-    automake \
-    go \
-    perl \
-    ruby \
-    php \
-    wine \
-    wine-dev \
-    makeit \
-    gcc \
-    imake \
-    alpine-make-vm-image
-    makedepend \
-    gccmakedep \
-    bmake \
-    kbuild \
-    qt \
-    pacman \
-    moreutils \
-    py3-pip \
-    py3-pip-bash-completion \
-    libvirt-client \
-    ncurses5-libs \
-    gettext \
-    nano \
-    sudo \
-    makedepend \
-    gzip \
-    db -y --allow-untrusted && \
-# 
+    bash -y \
+    curl -y \
+    wget -y \
+    fish -y \
+    zsh -y \
+    python3 -y \
+    perl -y \
+    automake -y \
+    git -y \
+    lua -y \
+    cmake -y \
+    archivemount -y \
+    make -y \
+    autoconf -y \
+    clang -y \
+    cython -y \
+    cmake-bash-completion -y \
+    extra-cmake-modules -y \
+    automake -y \
+    go -y \
+    perl -y \
+    ruby -y \
+    php -y \
+    wine -y \
+    wine-dev -y \
+    makeit -y \
+    gcc -y \
+    imake -y \
+    alpine-make-vm-image -y \
+    makedepend -y \
+    gccmakedep -y \
+    bmake -y \
+    kbuild -y \
+    qt -y \
+    pacman -y \
+    moreutils -y \
+    py3-pip -y \
+    py3-pip-bash-completion -y \
+    libvirt-client -y \
+    ncurses5-libs -y \
+    gettext -y \
+    nano -y \
+    sudo -y \
+    makedepend -y \
+    gzip -y \
+    db --allow-untrusted && \
 # 
 #!/bin/bash
-# 
 # 
 # Downloading Configurations File for Aliases To Run at Startup
 # 
@@ -117,33 +115,33 @@ mv ALIASES /etc/profile.d/ALIASES.sh && \
 chmod +X /etc/profile.d/ALIASES.sh && \
 # 
 # 
-#  "Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH..."
+# Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH...
 # 
 mkdir /mnt/mounted && \
 # 
 # 
-#  "Installing Bkpg.."
+# “Installing Bkpg.."
 # 
 curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash && \
 # 
 bpkg sudo apt-get install cha87de/bashutil -g && \
 # 
 # 
-#  "Configuring SSH for your system..." 
+# “Configuring SSH for your system..." 
 # 
-#  "Adding SSH Dependencies..."
+# “Adding SSH Dependencies..."
 # 
 apk add openssh openssh-client && \
 # 
-#  "Generating SSH Key..."
+# Generating SSH Key..."
 # 
 ssh-keygen -A && \
 # 
-##  "Generating SSH Password..."
+# “Generating SSH Password..."
 #passwd && \
 # 
 # 
-#  "Setting up VNC... Installing x11VNC, xTerm, and Xvfb"
+# “Setting up VNC... Installing x11VNC, xTerm, and Xvfb"
 # 
 apk add x11vnc && \
 # 
