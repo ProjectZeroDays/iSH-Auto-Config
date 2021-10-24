@@ -68,6 +68,28 @@ apk add &&
     autoconf \
     clang \
     cython \
+    cmake-bash-completion \
+    extra-cmake-modules \
+    automake \
+    go \
+    perl \
+    ruby \
+    php \
+    wine \
+    wine-dev \
+    makeit \
+    gcc \
+    imake \
+    alpine-make-vm-image
+    makedepend \
+    gccmakedep \
+    bmake \
+    kbuild \
+    qt \
+    pacman \
+    moreutils \
+    py3-pip \
+    py3-pip-bash-completion \
     libvirt-client \
     ncurses5-libs \
     gettext \
