@@ -1,39 +1,56 @@
 #!/bin/ash
-echo
-echo "License: GNU public"
-echo "Creator: Project Zero Days"
-echo "Github:  https://Github.com/ProjectZeroDays"
-echo "Website: https://ProjectZeroDays.com"
-echo "Email:   Info@ProjectZeroDays.com"
-echo "Secure:  ProjectZeroDays@pm.me"
-echo "Twitter: @ProjectZeroDays"
-echo "Reddit:  @ProjectZeroDays"
-echo "DEV:     @ProjectZeroDays" 
-echo
-echo "This auto configures Alpine for iSH testers by installing package managers," 
-echo "develpment tools, & configurations to their iSH (re)installation."
-echo
-echo "This install python3, Pip, Pipx, Bpkg, Pacman, PipEnv," 
-echo "SSH, VNC, Ruby, and much more!"
-echo
-echo
-echo "Adding Location Daemon in the Background to maintain active shell"
-echo "Allows Persistent Connections even When iSH is not open"
-echo
-ln -s /dev $(dirname $0)/dev
-echo
+# 
+# License: GNU public
+# Creator: Project Zero Days
+# Github:  https://Github.com/ProjectZeroDays
+# Website: https://ProjectZeroDays.com
+# Email:   Info@ProjectZeroDays.com
+# Secure:  ProjectZeroDays@pm.me
+# Twitter: ProjectZeroDays
+# Reddit:  ProjectZeroDays
+# DEV:     ProjectZeroDays 
+# 
+# This Autoconfigures Alpine For iSH By Installing Package Managers, Develpment Tools, and Modifying System Configurations to Their iSH (Re)installation.
+# 
+# Installation and Configurations For OpenSSH, python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, and much more!
+# 
+# 
+echo -e "$OKBLUE[*]$RESET Priveledged Account to Install Packages...$RESET"
+#
+adduser user -g sudo && \
+#
+passwd user && \
+#
+/bin/bash --login && \
+#
+#
+echo -e "$OKBLUE[*]$RESET Non-Priveledged Account to Install Homebrew...$RESET"
+#
+adduser nonpriv -G root && \
+#
+passwd user && \
+#
+/bin/bash --login user && \
+# 
+#
+# Adding Location Daemon in the Background to maintain active shell allows Persistent Connections even When iSH is not open...
+# 
+ln -s /dev $(dirname $0)/dev && \
+# 
 printf "Select 'Always allow'."
-echo
-cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
-echo
-echo
-echo "Updating iSH..."
-echo
-apk update && apk -y upgrade
-echo
-echo
-echo "Installing Dependencies..."
-echo
+# 
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #! && \
+# 
+# 
+# Updating and Upgrading Alpine in iSH...
+# 
+apk sudo apt-get update && sudo apt-get -y upgrade && \
+# 
+apk -y upgrade && \
+# 
+# 
+# Installing Dependencies...
+# 
 apk add &&
     bash \
     curl \
@@ -56,128 +73,132 @@ apk add &&
     nano \
     gzip \
     db -y --allow-untrusted && \
-echo 
-echo
-echo "Cloning Musl Cross Make..."
-echo
-git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz
-echo
-echo "Unpacking Musl Cross Make..."
-echo
-tar -xf v0.9.9.tar.gz
-echo
-echo "Changing Directories..."
-echo
-cd v0.9.9
-echo
-echo "Compiling and Installing Musl-Cross-Make..."
-echo
-make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 install
-echo
-echo "Changing Directories..."
-echo
-cd
-echo
-echo "Removing MCM Git Directory..."
-echo
-rm -r v0.9.9
-echo
-echo "Making Directory for lib64..."
-echo
-mkdir /lib64 
-echo
-echo "Linking x86 musl lib..."
-echo
-ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
-echo
-echo "Creating a soft link for ncurses..."
-echo
-ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
-echo
-echo
-echo "Adding Aliases to /etc/profile.d folder to run at startup..."
-echo
-wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES
-echo
-mv ALIASES  /etc/profile.d/ALIASES.sh
-echo
-chmod +X /etc/profile.d/ALIASES.sh
-echo
-echo
-echo "Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH..."
-echo
-mkdir /mnt/mounted
-echo
-echo
-echo "Installing Bkpg.."
-echo
-curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
-echo
-bpkg install cha87de/bashutil -g
-echo
-echo
-echo "Configuring SSH for your system..." && \
-echo
-echo "Adding SSH Dependencies..."
-echo
+# 
+# 
+#!/bin/bash
+# 
+# Cloning Musl Cross Make...
+# 
+git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz && \
+# 
+# Unpacking Musl Cross Make...
+# 
+tar -xf v0.9.9.tar.gz && \
+# 
+# Changing Directories...
+# 
+cd v0.9.9 && \
+# 
+# Compiling and Installing Musl-Cross-Make...
+# 
+make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 sudo apt-get install && \
+# 
+# Changing to Root Directory...
+# 
+cd && \
+# 
+# Removing 'MCM' Git Directory...
+# 
+rm -r v0.9.9 && \
+# 
+# Making Directory for 'lib64'...
+# 
+mkdir /lib64 && \
+# 
+# Linking 'libc.musl-i386.so.1' With 'ld-linux-x86-64.so.2'... 
+#
+ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2 && \
+# 
+# Creating a Soft Link For NCurses...
+# 
+ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5 && \
+# 
+# 
+# Downloading Configurations File for Aliases To Run at Startup
+# 
+wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES && \
+# 
+# Adding Aliases to /etc/profile.d and Changing The Name to 'ALIASES.sh' to Run at Startup...
+# 
+mv ALIASES /etc/profile.d/ALIASES.sh && \
+# 
+# Making ALIASES.sh Executable
+# 
+chmod +X /etc/profile.d/ALIASES.sh && \
+# 
+# 
+#  "Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH..."
+# 
+mkdir /mnt/mounted && \
+# 
+# 
+#  "Installing Bkpg.."
+# 
+curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash && \
+# 
+bpkg sudo apt-get install cha87de/bashutil -g && \
+# 
+# 
+#  "Configuring SSH for your system..." 
+# 
+#  "Adding SSH Dependencies..."
+# 
 apk add openssh openssh-client && \
-echo
-echo "Generating SSH Key..."
-echo
+# 
+#  "Generating SSH Key..."
+# 
 ssh-keygen -A && \
-echo
-#echo "Generating SSH Password..."
-echo
+# 
+##  "Generating SSH Password..."
 #passwd && \
-echo
-echo
-echo "Setting up VNC..."
-echo
-echo "Installs x11VNC, xTerm, and Xvfb"
-echo
+# 
+# 
+#  "Setting up VNC... Installing x11VNC, xTerm, and Xvfb"
+# 
 apk add x11vnc && \
-echo
+# 
 apk add xvfb xvfb-run && \
-echo
+# 
 apk add xterm && \
-echo
-echo "To Set A Password to Connect to VNC Server:"
-echo
+# 
+#  "In Order to Set A Password to Connect to VNC Server:"
+# 
 # x11vnc -rfbauth ~/.vnc/passwd
-# Use Your Own VNC Passwd File 
+# 
+# Use Your Own VNC Passwd File
+# 
 # x11vnc -rfbauth /PATH/file
-# Disable Password Usage -nopw 
-echo
-# To Use x11VNC SSL Tunneling 
+# 
+# Disable Password Usage -nopw
+# 
+# To Use x11VNC SSL Tunneling
 # '-ssl -stunnel'
-echo
-echo "Documentation for x11VNC-SSH Tunneling:" 
-echo
-echo "http://www.karlrunge.com/x11vnc/#tunnelling"  
-echo
-echo "To Open VNC Viewer on iOS, open VNC Viewer"
-echo "and use the the following examples"
-echo
-echo "Start without SSL use the follwoing:"
-echo
-echo "127.0.0.1:5900, 0.0.0.0:5900, localhost:0, ::0"
-echo 
-echo "Start With SSL use the following:"
-echo
-echo "127.0.0.1:5901,0.0.0.0:5901, localhost:1, ::1"
-echo
-echo "To view within shortcuts or within a browser"
-echo
-echo "Open Safari and add 'VNC://' as a prefix to the IP:Port"
-echo
-echo "VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0"
-echo "VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1"
-echo
-echo "Running x11VNC with no passwd using SSL/Tunneling..."
-echo
-x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
-echo
-echo
-echo "..and we are done!"
-echo
-echo "Enjoy!"
+# 
+# Documentation for x11VNC-SSH Tunneling:
+# http://www.karlrunge.com/x11vnc/#tunnelling
+# 
+# To Open VNC Viewer on iOS, open VNC Viewer and Use The Following Examples:
+# 
+# Start without SSL use the follwoing:
+# 
+# "127.0.0.1:5900, 0.0.0.0:5900, localhost:0, ::0
+# 
+# "Start With SSL use the following:
+# 
+# 127.0.0.1:5901,0.0.0.0:5901, localhost:1, ::1
+# 
+# To view within shortcuts or within a browser
+# 
+# Open Safari and add 'VNC://' as a prefix to the IP:Port
+# 
+# VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0
+# VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1
+# 
+# Running x11VNC with no passwd using SSL/Tunneling...
+#  
+x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" & 
+# 
+# 
+# ...and we are done!
+# 
+# Enjoy!
