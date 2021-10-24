@@ -103,42 +103,6 @@ apk add &&
 # 
 #!/bin/bash
 # 
-# Cloning Musl Cross Make...
-# 
-git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz && \
-# 
-# Unpacking Musl Cross Make...
-# 
-tar -xf v0.9.9.tar.gz && \
-# 
-# Changing Directories...
-# 
-cd v0.9.9 && \
-# 
-# Compiling and Installing Musl-Cross-Make...
-# 
-make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 sudo apt-get install && \
-# 
-# Changing to Root Directory...
-# 
-cd && \
-# 
-# Removing 'MCM' Git Directory...
-# 
-rm -r v0.9.9 && \
-# 
-# Making Directory for 'lib64'...
-# 
-mkdir /lib64 && \
-# 
-# Linking 'libc.musl-i386.so.1' With 'ld-linux-x86-64.so.2'... 
-#
-ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2 && \
-# 
-# Creating a Soft Link For NCurses...
-# 
-ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5 && \
-# 
 # 
 # Downloading Configurations File for Aliases To Run at Startup
 # 
