@@ -64,6 +64,7 @@ apk add &&
     lua \
     cmake \
     archivemount \
+    make \
     autoconf \
     clang \
     cython \
