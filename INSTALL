@@ -19,15 +19,17 @@ echo
 echo
 echo "Adding Location Daemon in the Background to maintain active shell"
 echo "Allows Persistent Connections even When iSH is not open"
+echo
 ln -s /dev $(dirname $0)/dev
 echo
-echo
 printf "Select 'Always allow'."
+echo
 cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #!
 echo
 echo
 echo "Updating iSH..."
-apk update
+echo
+apk update && apk -y upgrade
 echo
 echo
 echo "Installing Dependencies..."
@@ -53,7 +55,7 @@ apk add &&
     gettext \
     nano \
     gzip \
-    db --allow-untrusted && \
+    db -y --allow-untrusted && \
 echo 
 echo
 echo "Cloning Musl Cross Make..."
