@@ -57,30 +57,39 @@ apk add &&
 echo 
 echo
 echo "Cloning Musl Cross Make..."
+echo
 git clone https://github.com/richfelker/musl-cross-make/archive/refs/tags/v0.9.9.tar.gz
 echo
 echo "Unpacking Musl Cross Make..."
+echo
 tar -xf v0.9.9.tar.gz
 echo
 echo "Changing Directories..."
+echo
 cd v0.9.9
 echo
 echo "Compiling and Installing Musl-Cross-Make..."
+echo
 make TARGET=i386-linux-musl OUTPUT=[whatever] -j4 install
 echo
 echo "Changing Directories..."
+echo
 cd
 echo
 echo "Removing MCM Git Directory..."
+echo
 rm -r v0.9.9
 echo
 echo "Making Directory for lib64..."
+echo
 mkdir /lib64 
 echo
 echo "Linking x86 musl lib..."
+echo
 ln -s /lib/libc.musl-i386.so.1 /lib64/ld-linux-x86-64.so.2
 echo
 echo "Creating a soft link for ncurses..."
+echo
 ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
 echo
 echo
@@ -94,35 +103,43 @@ chmod +X /etc/profile.d/ALIASES.sh
 echo
 echo
 echo "Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH..."
+echo
 mkdir /mnt/mounted
 echo
 echo
 echo "Installing Bkpg.."
+echo
 curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
+echo
 bpkg install cha87de/bashutil -g
 echo
 echo
 echo "Configuring SSH for your system..." && \
 echo
 echo "Adding SSH Dependencies..."
+echo
 apk add openssh openssh-client && \
 echo
 echo "Generating SSH Key..."
+echo
 ssh-keygen -A && \
 echo
 #echo "Generating SSH Password..."
+echo
 #passwd && \
 echo
 echo
 echo "Setting up VNC..."
+echo
 echo "Installs x11VNC, xTerm, and Xvfb"
+echo
 apk add x11vnc && \
 echo
 apk add xvfb xvfb-run && \
 echo
 apk add xterm && \
 echo
-# To Set A Password to Connect to VNC Server:
+echo "To Set A Password to Connect to VNC Server:"
 echo
 # x11vnc -rfbauth ~/.vnc/passwd
 # Use Your Own VNC Passwd File 
@@ -155,8 +172,10 @@ echo "VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0"
 echo "VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1"
 echo
 echo "Running x11VNC with no passwd using SSL/Tunneling..."
+echo
 x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" &
 echo
 echo
 echo "..and we are done!"
+echo
 echo "Enjoy!"
