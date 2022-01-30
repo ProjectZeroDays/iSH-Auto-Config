@@ -83,7 +83,6 @@
  
 ### Install Dependencies:
     apk add curl 
-
 ### Installation:
     /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/INSTALL)"
 
