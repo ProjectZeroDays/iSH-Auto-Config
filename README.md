@@ -13,16 +13,16 @@
 
 ### Working on this currently, it's not ready for deployment. However, Feel free to contribute...
 
-This is an automated configuration 
-script that I created to (re)establish 
-a fully updated, upgraded, and 
-pre-configured development environment
- within iSH when things go wrong 
-and your files disappear or you 
-happen to break something internally
- beyond repair. I got a little tired 
-of continually setting everything 
-back up again. 
+    This is an automated configuration 
+    script that I created to (re)establish 
+    a fully updated, upgraded, and 
+    pre-configured development environment
+     within iSH when things go wrong 
+    and your files disappear or you 
+    happen to break something internally
+     beyond repair. I got a little tired 
+    of continually setting everything 
+    back up again. 
 
 #### NOTE: 
     You can now backup your file system using the settings menu as descibed in the wiki: 
