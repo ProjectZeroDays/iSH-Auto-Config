@@ -24,12 +24,6 @@ https://github.com/ish-app/ish/wiki/
 ### Shortcut to Open iSH using shortcuts:
 https://www.icloud.com/shortcuts/e7ba2a42853949d0af0b6b843580d815
 
-This shortcut will download Tesflight and iSH, clone the github repo, and run the INSTALL script automatically over SSH. Cheers!
-Now let’s get cracking...
-
-#### Testflight
-    https://itunes.apple.com/us/app/testflight/id899247664
-
 #### iSH Website:
     https://ish.app
 
@@ -72,9 +66,6 @@ Now let’s get cracking...
     iPad Pro 12.9 Pro (iOS 12.1.1 Jailbroken With Root)
     iPhone XS (iOS 13.2.1 Non-Jail Broken With Root)
     iPhone 7 Plus (iOS 13.3 Non-Jail Broken With Root)
-
-#### App Version Installed:
-    iSH v1.0 (73) - Alpine Linux 3.11
     
 #### Virtualized CPU Architecture:
     i386
