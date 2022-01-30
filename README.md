@@ -24,67 +24,67 @@
     of continually setting everything 
     back up again. 
 
-#### NOTE: 
+### NOTE: 
     You can now backup your file system using the settings menu as descibed in the wiki: 
     https://github.com/ish-app/ish/wiki/
 
-#### Shortcut to Open iSH using shortcuts:
+### Shortcut to Open iSH using shortcuts:
     https://www.icloud.com/shortcuts/e7ba2a42853949d0af0b6b843580d815
 
-#### iSH Website:
-     https://ish.app
+### iSH Website:
+    https://ish.app
 
-#### iSH Github:
-     https://github.com/ish-app/ish
+### iSH Github:
+    https://github.com/ish-app/ish
 
-#### iSH Wiki:
-     https://github.com/ish-app/ish/wiki
+### iSH Wiki:
+    https://github.com/ish-app/ish/wiki
 
-#### iSH Twitter:
-     https://twitter.com/iSH_app
+### iSH Twitter:
+    https://twitter.com/iSH_app
 
-#### iSH Reddit:
-     https://www.reddit.com/r/ish
+### iSH Reddit:
+    https://www.reddit.com/r/ish
 
-#### iSH Discord:
-     https://discord.gg/SndDh5y
+### iSH Discord:
+    https://discord.gg/SndDh5y
 
-#### iSH Patreon:
-     https://patreon.com/tbodt
+### iSH Patreon:
+    https://patreon.com/tbodt
 
-#### iSH Bug Reports & Feedback:
-     https://github.com/ish-app/ish/issues 
+### iSH Bug Reports & Feedback:
+    https://github.com/ish-app/ish/issues 
 
-#### Developer:
-     Theodore Dubois
-     tdlodt@icloud.com
+### Developer:
+    Theodore Dubois
+    tdlodt@icloud.com
 
-#### Requires:
-     iOS 11 or later
-     Apple TestFlight App
-     https://apps.apple.com/us/app/testflight/id899247664
+### Requires:
+    iOS 11 or later
+    Apple TestFlight App
+    https://apps.apple.com/us/app/testflight/id899247664
 
-#### Compatibility:
-     iPhone 5 or later
-     iPad Air or later
-     iPod Touch
+### Compatibility:
+    iPhone 5 or later
+    iPad Air or later
+    iPod Touch
 
-#### This script was designed on the following device, 
+### This script was designed on the following device, 
     architecture, software and kernel versions. Use at your own discretion.
     iPad Pro 12.9 Pro (iOS 12.1.1 Jailbroken With Root)
     iPhone XS (iOS 13.2.1 Non-Jail Broken With Root)
     iPhone 7 Plus (iOS 13.3 Non-Jail Broken With Root)
     
-#### Virtualized CPU Architecture:
-     i386
+### Virtualized CPU Architecture:
+    i386
 
-#### Installation: 
+### Installation: 
     Open iSH on your iOS device and select settings. Select the option to turn on “Disable Screen Dimming”
  
-#### Install Dependencies:
-     apk add curl 
+### Install Dependencies:
+    apk add curl 
 
-#### Installation:
-     /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/INSTALL)"
+### Installation:
+    /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/INSTALL)"
 
-#### Enjoy! Please let me know what I may add or contribute!
+### Enjoy! Please let me know what I may add or contribute!
