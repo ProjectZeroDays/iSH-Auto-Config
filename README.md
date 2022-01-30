@@ -24,11 +24,11 @@ happen to break something internally
 of continually setting everything 
 back up again. 
 
-### NOTE: 
+#### NOTE: 
     You can now backup your file system using the settings menu as descibed in the wiki: 
     https://github.com/ish-app/ish/wiki/
 
-### Shortcut to Open iSH using shortcuts:
+#### Shortcut to Open iSH using shortcuts:
     https://www.icloud.com/shortcuts/e7ba2a42853949d0af0b6b843580d815
 
 #### iSH Website:
@@ -69,7 +69,7 @@ back up again.
      iPad Air or later
      iPod Touch
 
-### This script was designed on the following device, 
+#### This script was designed on the following device, 
     architecture, software and kernel versions. Use at your own discretion.
     iPad Pro 12.9 Pro (iOS 12.1.1 Jailbroken With Root)
     iPhone XS (iOS 13.2.1 Non-Jail Broken With Root)
@@ -78,7 +78,7 @@ back up again.
 #### Virtualized CPU Architecture:
      i386
 
-### Installation: 
+#### Installation: 
     Open iSH on your iOS device and select settings. Select the option to turn on “Disable Screen Dimming”
  
 #### Install Dependencies:
