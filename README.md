@@ -11,10 +11,10 @@
     script that I created to (re)establish 
     a fully updated, upgraded, and 
     pre-configured development environment
-     within iSH when things go wrong 
+    within iSH when things go wrong 
     and your files disappear or you 
     happen to break something internally
-     beyond repair. I got a little tired 
+    beyond repair. I got a little tired 
     of continually setting everything 
     back up again. 
 ### NOTE: 
