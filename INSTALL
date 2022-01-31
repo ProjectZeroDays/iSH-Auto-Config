@@ -1,4 +1,5 @@
 #!/bin/ash
+# 
 # License: GNU public
 # Creator: Project Zero Days
 # Github:  https://Github.com/ProjectZeroDays
@@ -8,39 +9,37 @@
 # Twitter: ProjectZeroDays
 # Reddit:  ProjectZeroDays
 # DEV:     ProjectZeroDays 
-
-# This Autoconfigures Alpine For iSH 
-# By Installing Package Managers, 
-# Develpment Tools, and Modifying 
-# System Configurations to Their 
-# iSH (Re)installation.
-#
-# Installation and Configurations 
-# For OpenSSH, python3, Pip, Pipx, 
-# Bpkg, Pacman, PipEnv, SSH, VNC, 
-# Ruby, and much more!
-#
+# 
+printf "This Autoconfigures Alpine For iSH By Installing Package Managers, Develpment Tools, and Modifying System Configurations to Their iSH (Re)installation."
+# 
+printf "Installation and Configurations For OpenSSH, python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, and much more!"
+# 
 echo -e "$OKBLUE[*]$RESET Set Root Password $RESET"
+# 
 passwd root 
 #
 echo -e "$OKBLUE[*]$RESET Non-Priveledged Account to Install Homebrew...$RESET"
+# 
 adduser nonpriv -G root
+# 
 passwd nonpriv 
-#
-# Adding Location Daemon in the 
-# Background to maintain active 
-# shell allows Persistent Connections
-# even When iSH is not open...
-ln -s /dev $(dirname $0)/dev
-
+# 
+printf "Adding Location Daemon in the Background to maintain active shell allows Persistent Connections even When iSH is not open..."
+# 
+ln -s /dev $(dirname $0)/dev/
+# 
 printf "Select 'Always allow'."
+# 
 cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #! 
-
-# "Updating and Upgrading Alpine in iSH..."
+# 
+printf "Updating and Upgrading Alpine in iSH..."
+# 
 apk update
+# 
 apk upgrade 
-
-# Installing Dependencies...
+# 
+printf "Installing Dependencies..."
+# 
 apk add &&
     bash \ 
     sudo \
@@ -94,92 +93,100 @@ apk add &&
     xvfb \
     xterm \
     db --allow-untrusted && \
-
-!#/bin/bash
-# "Downloading Configurations File for Aliases To Run at Startup"
+# 
+printf "Switching to Bash..."
+# 
+/bin/bash
+# 
+printf "Downloading Configurations File for Aliases To Run at Startup"
+# 
 wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES 
-
-# Adding Aliases to /etc/profile.d 
-and Changing The Name to 'ALIASES.sh' to Run at Startup...
-cp -r ALIASES /etc/profile.d to be ran at startup
-
-# Renaming ALIASES to ALIASES.sh
+# 
+printf "Adding Aliases to /etc/profile.d and Changing The Name to 'ALIASES.sh' to Run at Startup..."
+# 
+cp -r ALIASES /etc/profile.d
+# 
+printf "Renaming ALIASES to ALIASES.sh"
+# 
 mv /etc/profile.d/ALIASES /etc/profile.d/ALIASES.sh
-
-# Making ALIASES.sh Executable
-chmod +X /etc/profile.d/ALIASES.sh 
-
-# Adding Mounted Folder to Mount 
-# $SYSROOT or other Directories 
-# in iSH..."
+# 
+printf "Making ALIASES.sh Executable"
+# 
+chmod +X /etc/profile.d/ALIASES.sh
+# 
+printf "Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH..."
+# 
 mkdir /mnt/mounted 
-
-# Installing BPKG (Bash Pakage Manager)
+# 
+printf "Installing BPKG (Bash Pakage Manager)"
+# 
 curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash 
+# 
 bpkg apt-get install cha87de/bashutil -g 
-
-# Configuring SSH for your system... 
-#
-# Generating SSH Key..."
+# 
+printf "Configuring SSH for your system..."
+# 
+printf "Generating SSH Key..."
+# 
 ssh-keygen -A 
-
-# Generating SSH Password...
+# 
+printf "Generating SSH Password..."
+# 
 passwd 
-
-# Setting up VNC... 
+# 
+printf "Setting up VNC..."
+# 
+printf "In Order to Set A Password to Connect to VNC Server:"
+# 
+printf "x11vnc -rfbauth ~/.vnc/passwd"
+# 
+printf "Use Your Own VNC Passwd File:"
+# 
+printf "x11vnc -rfbauth /PATH/file"
+# 
+printf "Disable Password Usage:"
+# 
+printf "-nopw"
+# 
+printf "To Use x11VNC SSL Tunneling:"
+# 
+printf "-ssl -stunnel"
+# 
+printf "Documentation for x11VNC SSH Tunneling:"
+# 
+printf "http://www.karlrunge.com/x11vnc#tunnelling"
+# 
+printf "To Start VNC without SSL:"
+# 
+printf "127.0.0.1:5900"
+printf "0.0.0.0:5900"
+printf "localhost:0"
+printf "::0"
 #
-# In Order to Set A Password to 
-# Connect to VNC Server:
 #
-# "x11vnc -rfbauth ~/.vnc/passwd"
+printf "Start With SSL use the following:"
 #
-# Use Your Own VNC Passwd File:
+printf "127.0.0.1:5901"
+printf "0.0.0.0:5901"
+printf "localhost:1"
+printf "::1"
 #
-# "x11vnc -rfbauth /PATH/file"
+printf "To Open Using URI Scheme Use:"
 #
-# Disable Password Usage:
+printf "VNC:// as a prefix to IP:Port"
 #
-# "-nopw"
+printf "VNC://127.0.0.1:5900"
+printf "VNC://0.0.0.0:5900"
+printf "VNC://localhost:0"
 #
-# To Use x11VNC SSL Tunneling:
+printf "To open with tunneling use:"
 #
-# "-ssl -stunnel"
-#
-# Documentation for x11VNC SSH 
-# Tunneling:
-#
-# "http://www.karlrunge.com/x11vnc#tunnelling"
-#
-# To Start VNC without SSL: 
-#
-# 127.0.0.1:5900
-# 0.0.0.0:5900
-# localhost:0 
-# ::0
-#
-# Start With SSL use the following:
-#
-# 127.0.0.1:5901
-# 0.0.0.0:5901
-# localhost:1
-# ::1
-#
-# To Open Using URI Scheme Use:
-#
-# VNC:// as a prefix to IP:Port
-#
-# VNC://127.0.0.1:5900
-# VNC://0.0.0.0:5900
-# VNC://localhost:0
-#
-# To open with tunneling use:
-#
-# VNC://127.0.0.1:5901
-# VNC://0.0.0.0:5901
-# VNC://localhost:1
+printf "VNC://127.0.0.1:5901"
+printf "VNC://0.0.0.0:5901"
+printf "VNC://localhost:1"
 #
 x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" & 
-
-# ...and we are done!
 #
-# Enjoy!
+printf "...and we are done!"
+#
+printf "Enjoy!"
