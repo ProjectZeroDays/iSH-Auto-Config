@@ -1,5 +1,5 @@
 #!/bin/ash
-# 
+
 # License: GNU public
 # Creator: Project Zero Days
 # Github:  https://Github.com/ProjectZeroDays
@@ -9,184 +9,169 @@
 # Twitter: ProjectZeroDays
 # Reddit:  ProjectZeroDays
 # DEV:     ProjectZeroDays 
-# 
+
 # This Autoconfigures Alpine For iSH By Installing Package Managers, Develpment Tools, and Modifying System Configurations to Their iSH (Re)installation.
-# 
+
 # Installation and Configurations For OpenSSH, python3, Pip, Pipx, Bpkg, Pacman, PipEnv, SSH, VNC, Ruby, and much more!
-# 
-# 
+
 echo -e "$OKBLUE[*]$RESET Priveledged 
 Account to Install Packages...$RESET"
-#
-adduser user -g sudo && \
-#
-passwd user && \
-#
-/bin/bash --login && \
-#
-#
+
+adduser user -g sudo 
+passwd user 
+/bin/bash --login 
+
 echo -e "$OKBLUE[*]$RESET Non-Priveledged Account to Install Homebrew...$RESET"
-#
-adduser nonpriv -G root && \
-#
-passwd user && \
-#
-/bin/bash --login user && \
-# 
-#
+
+adduser nonpriv -G root
+passwd user 
+/bin/bash --login user 
+
 # Adding Location Daemon in the Background to maintain active shell allows Persistent Connections even When iSH is not open...
-# 
-ln -s /dev $(dirname $0)/dev && \
-# 
+#
+ln -s /dev $(dirname $0)/dev
+#
 printf "Select 'Always allow'."
-# 
-cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #! && \
-# 
-# 
+#
+cat $(dirname $0)/dev/location > $(dirname $0)/dev/null & #! 
+
 # Updating and Upgrading Alpine in iSH...
-# 
+
 apk add sudo
 apk update
-apk -y upgrade && \
-# 
-# 
+apk upgrade 
+
 # Installing Dependencies...
-# 
+
 apk add &&
-    bash -y \
-    curl -y \
-    wget -y \
-    fish -y \
-    zsh -y \
-    python3 -y \
-    perl -y \
-    automake -y \
-    git -y \
-    lua -y \
-    cmake -y \
-    archivemount -y \
-    make -y \
-    autoconf -y \
-    clang -y \
-    cython -y \
-    cmake-bash-completion -y \
-    extra-cmake-modules -y \
-    automake -y \
-    go -y \
-    perl -y \
-    ruby -y \
-    php -y \
-    wine -y \
-    wine-dev -y \
-    makeit -y \
-    gcc -y \
-    imake -y \
-    alpine-make-vm-image -y \
-    makedepend -y \
-    gccmakedep -y \
-    bmake -y \
-    kbuild -y \
-    qt -y \
-    pacman -y \
-    moreutils -y \
-    py3-pip -y \
-    py3-pip-bash-completion -y \
-    libvirt-client -y \
-    ncurses5-libs -y \
-    gettext -y \
-    nano -y \
-    sudo -y \
-    makedepend -y \
-    gzip -y \
+    bash \
+    curl \
+    wget \
+    fish \
+    zsh \
+    python3 \
+    perl \
+    automake \
+    git \
+    lua \
+    cmake \
+    archivemount \
+    make \
+    autoconf \
+    clang \
+    cython \
+    cmake-bash-completion \
+    extra-cmake-modules \
+    automake \
+    go \
+    perl \
+    ruby \
+    php \
+    wine \
+    wine-dev \
+    makeit \
+    gcc \
+    imake \
+    alpine-make-vm-image \
+    makedepend \
+    gccmakedep \
+    bmake \
+    kbuild \
+    qt \
+    pacman \
+    moreutils \
+    py3-pip \
+    py3-pip-bash-completion \
+    libvirt-client \
+    ncurses5-libs \
+    gettext \
+    nano \
+    sudo \
+    makedepend \
+    gzip \
     db --allow-untrusted && \
-# 
+
 #!/bin/bash
-# 
+
 # Downloading Configurations File for Aliases To Run at Startup
-# 
-wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES && \
-# 
+
+wget https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/CONFIG/ALIASES 
+
 # Adding Aliases to /etc/profile.d and Changing The Name to 'ALIASES.sh' to Run at Startup...
-# 
-mv ALIASES /etc/profile.d/ALIASES.sh && \
-# 
+
+mv ALIASES /etc/profile.d/ALIASES.sh 
+
 # Making ALIASES.sh Executable
-# 
-chmod +X /etc/profile.d/ALIASES.sh && \
-# 
-# 
+
+chmod +X /etc/profile.d/ALIASES.sh 
+
 # Adding Mounted Folder to Mount $SYSROOT or other Directories in iSH...
-# 
-mkdir /mnt/mounted && \
-# 
-# 
+
+mkdir /mnt/mounted 
+
 # “Installing Bkpg.."
-# 
-curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash && \
-# 
-bpkg sudo apt-get install cha87de/bashutil -g && \
-# 
-# 
+
+curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash 
+bpkg sudo apt-get install cha87de/bashutil -g 
+
 # “Configuring SSH for your system..." 
-# 
+#
 # “Adding SSH Dependencies..."
-# 
-apk add openssh openssh-client && \
-# 
+
+apk add openssh openssh-client 
+
 # Generating SSH Key..."
-# 
-ssh-keygen -A && \
-# 
+
+ssh-keygen -A 
+
 # “Generating SSH Password..."
-#passwd && \
-# 
-# 
+  
+passwd 
+
 # “Setting up VNC... Installing x11VNC, xTerm, and Xvfb"
-# 
-apk add x11vnc && \
-# 
-apk add xvfb xvfb-run && \
-# 
-apk add xterm && \
-# 
+
+apk add x11vnc 
+apk add xvfb xvfb-run 
+apk add xterm 
+
 #  "In Order to Set A Password to Connect to VNC Server:"
-# 
+#
 # x11vnc -rfbauth ~/.vnc/passwd
-# 
+#
 # Use Your Own VNC Passwd File
-# 
+#
 # x11vnc -rfbauth /PATH/file
-# 
+#
 # Disable Password Usage -nopw
-# 
+#
 # To Use x11VNC SSL Tunneling
 # '-ssl -stunnel'
-# 
+#
 # Documentation for x11VNC-SSH Tunneling:
-# http://www.karlrunge.com/x11vnc/#tunnelling
+#
+# http://www.karlrunge.com/x11vnc#tunnelling
 # 
 # To Open VNC Viewer on iOS, open VNC Viewer and Use The Following Examples:
 # 
-# Start without SSL use the follwoing:
-# 
+# Start without SSL use the 
+#
 # "127.0.0.1:5900, 0.0.0.0:5900, localhost:0, ::0
-# 
+#
 # "Start With SSL use the following:
-# 
+#
 # 127.0.0.1:5901,0.0.0.0:5901, localhost:1, ::1
-# 
+#
 # To view within shortcuts or within a browser
-# 
+#
 # Open Safari and add 'VNC://' as a prefix to the IP:Port
-# 
+#
 # VNC://127.0.0.1:5900, VNC://0.0.0.0:5900, VNC://localhost:0, ::0:0
 # VNC://127.0.0.1:5901, VNC://0.0.0.0:5901, VNC://localhost:1, ::1:1
-# 
+
 # Running x11VNC with no passwd using SSL/Tunneling...
-#  
+
 x11vnc -rfbauth -usepw -ssl -stunnel "~/.vnc/passwd" & 
-# 
-# 
+
 # ...and we are done!
-# 
+
 # Enjoy!
