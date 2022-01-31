@@ -56,10 +56,6 @@
     iPhone 7 Plus (iOS 13.3 Non-Jail Broken With Root)
 ### Virtualized CPU Architecture:
     i386
-### Installation: 
-    Open iSH on your iOS device and select settings. Select the option to turn on “Disable Screen Dimming”
-### Install Dependencies:
-    apk add curl 
 ### Installation:
-    /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/INSTALL)"
+    apk update && apk upgrade && apk add curl && /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/INSTALL)"
 ### Enjoy! Please let me know what I may add or contribute!
