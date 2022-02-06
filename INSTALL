@@ -40,15 +40,13 @@ apk upgrade
 # 
 printf "Installing Dependencies..."
 # 
-apk add &&
+apk add && 
     bash \ 
     sudo \
     curl \
     wget \
     fish \
     zsh \
-    python3 \
-    perl \
     automake \
     git \
     lua \
@@ -82,6 +80,8 @@ apk add &&
     moreutils \
     py3-pip \
     py3-pip-bash-completion \
+    python2.7 \
+    python3 \
     libvirt-client \
     ncurses5-libs \
     gettext \
@@ -92,7 +92,7 @@ apk add &&
     gzip \
     xvfb \
     xterm \
-    db --allow-untrusted && \
+    db && \
 # 
 printf "Switching to Bash..."
 # 
