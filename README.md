@@ -57,7 +57,5 @@
 ### Virtualized CPU Architecture:
     i386
 ### Installation:
-    apk add curl && /bin/ash -c "$(curl -fsSL ht
-tps://raw.githubusercontent.com/ProjectZeroDays/iSH
--Auto-Config/master/INSTALL)"
+    apk add curl && /bin/ash -c "$(curl -fsSL https://raw.githubusercontent.com/ProjectZeroDays/iSH-Auto-Config/master/INSTALL)"
 ### Enjoy! Please let me know what I may add or contribute!
