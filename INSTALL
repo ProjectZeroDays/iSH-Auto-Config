@@ -40,22 +40,11 @@ apk upgrade
 # 
 # Installing Dependencies...
 # 
-apk add alpine-make-vm-image archivemount 
-autoconf automake autossh bash bmake 
-clang cmake cmake-bash-completion 
-cython db extra-cmake-modules fish gcc 
-gccmakedeep gettext git go gzip imake 
-kbuild libvirt-client lua make 
-makedepend makedepend makeit moreutils 
-nano ncurses5-libs openssh 
-openssh-client pacman perl php py3-pip
-py3-pip-bash-completion python2.7 
-python3 qt ruby sudo wget wine 
-wine-dev x11vnc xterm xvfb zsh &&
+apk add alpine-make-vm-image archivemount autoconf automake autossh bash bmake clang cmake cmake-bash-completion cython db extra-cmake-modules fish gcc gccmakedeep gettext git go gzip imake kbuild libvirt-client lua make makedepend makedepend makeit moreutils nano ncurses5-libs openssh openssh-client pacman perl php py3-pip py3-pip-bash-completion python2.7 python3 qt ruby sudo wget wine wine-dev x11vnc xterm xvfb zsh &&
 # 
 # Switching to Bash...
 # 
-/bin/bash
+bash
 # 
 # Downloading Configurations File for Aliases To Run at Startup
 # 
